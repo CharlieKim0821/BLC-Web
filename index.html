@@ -1,32 +1,78 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>CSS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        * {
-            box-sizing: border-box;
+        .container {
+            background-color: pink;
+            position: relative;
+            width: 500px;
+            height: 50px;
+            border-radius: 0px 25px 25px 0px;
         }
 
-        .jb-box {
-            width: 200px;
-            height: 200px;
-            margin: 50px auto;
-            padding: 20px;
-            transition: all 0.5s linear;
+        .box {
+            width: 490px;
+            height: 50px;
+            background-color: green;
+            animation-name: slidein;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            border-radius: 0px 25px 25px 0px;
         }
 
-        .jb-box:hover {
-            transform: scaleX(3);
+        @keyframes slidein {
+            0% {
+                width: 0px;
+                opadity: 0;
+            }
+
+            30% {
+                width: 40px;
+            }
+
+            40% {
+                width: 50px;
+            }
+
+            45% {
+                width: 60px;
+            }
+
+            50% {
+                width: 70px;
+            }
+
+            80% {
+                width: 200px;
+            }
+
+            85% {
+                width: 295px;
+            }
+
+            99% {
+                width: 455px;
+            }
+
+            100% {
+                width: 490px;
+                opacity: 1;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="jb-box">
-        <img src="./face.jpg" width="200" alt="인스타" />
+    <div class="container">
+        <div class="box">
+        </div>
     </div>
+
 </body>
 
 </html>
