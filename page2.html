@@ -1,12 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Skiiny fat</title>
+    <style>
+        body{
+            margin:0px
+        }
+        .secondpage {
+            display: flex;
+            flex-direction: column;
+            border:solid;
+        }
+
+        /* 1번째 줄 */
+        .line1 {
+            display: flex;
+            flex-direction: row;
+            
+            height: 300px
+        }
+
+        .icon1 {
+            width: 300px;
+            border: solid;
+            background-color: rgb(201, 255, 190);
+        }
+
+        .content1 {
+            font-size: 30px;
+            width: 100%;
+            border:solid;
+        }
+
+        .line2 {
+            display: flex;
+            flex-direction: row;
+            
+            height: 300px
+        }
+
+        .icon2 {
+            width: 300px;
+            border: solid;
+            background-color: rgb(250, 200, 255);
+        }
+
+        .content2 {
+            font-size: 30px;
+            width: 100%;
+            border:solid;
+        }
+
+        /* 3,4번째 줄 */
+        .line3 {
+            display: flex;
+            flex-direction: row;
+            border: solid;
+            height: 300px
+        }
+
+        .icon3 {
+            width: 300px;
+            border: solid;
+            background-color: rgb(255, 251, 190);
+        }
+
+        .content3 {
+            font-size: 30px;
+            width: 100%;
+            border:solid;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+       
+        .line4 {
+            display: flex;
+            flex-direction: row;
+            border: solid;
+            height: 300px
+        }
+
+        .icon4 {
+            width: 300px;
+            border: solid;
+            background-color: rgb(202, 220, 255);
+        }
+
+        .content4 {
+            font-size: 30px;
+            width: 100%;
+            border:solid;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+        /* img */
+        img{
+            display: flex;
+            margin:auto;
+            
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="header"></div>
+    <div class="secondpage">
+        <div class="line1">
+            <div class="icon1">
+                <img src="./skinny_fat.png" width=280px>
+            </div>
+            <div class="content1">
+                <p>겉으로 봐서는 건강하고 마른 몸매이지만 체지방률이 정상 수치를 초과하고 근육량은 정상 수치보다 못한 상태를 말한다.</p>
+
+                <p>일반적으로 겉으로 잘 드러나는 비만과는 달리 내장지방이 쌓여서 인지하기 어렵고, 지방을 감량하기 힘든 것이 특징이다.</p>
+            </div>
+        </div>
+        <div class="line2">
+            <div class="content2">
+                심혈관질환을 유발하고, 당뇨병이나 대사증후군에 걸릴 확률이 높으며, 고혈압 발생위험이 증가한다.
+            </div>
+            <div class="icon2">
+                <img src="./warning.png" width="280px">
+            </div>
+            
+        </div>
+        <div class="line3">
+            <div class="icon3">
+                <img src="./why.png" width="280px">
+            </div>
+            <div class="content3">
+                불규칙적인 식사습관이 주 원인이며, 운동부족 또한 마른비만의 원인이 될 수 있다.
+            </div>
+        </div>
+        <div class="line4">
+            <div class="content4">
+                <p>규칙적인 식습관을 가지고 과도한 탄수화물 섭취를 자제한다. 운동과 병행해서 할 경우 단백질 섭취를 늘리는 것이 중요하다. 운동을 할때 유산소 운동보다는 무산소 운동, 특히 고중량 저반복 위주의 트레이닝을 권장한다. </p>
+                <p>꾸준한 인바디체크를 통해 자신의 신체 상태를 측정하도록 한다.</p>
+            </div>
+            <div class="icon4">
+                <img src="./shield.png" width="280px">
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
