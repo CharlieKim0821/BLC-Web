@@ -20,16 +20,29 @@
         .line1 {
             display: flex;
             flex-direction: row;
-            
             height: 300px
         }
 
         .icon1 {
-            width: 300px;
+            width: 350px;
             border: solid;
-            background-color: rgb(201, 255, 190);
+            
         }
-
+        .icon1:hover{
+            background: url("skinny_fat.png");
+            background-size: 300px;
+            background-color: rgb(80, 148, 80);
+        }
+        .text1{
+            font-size: 30px;
+            text-align: center;
+            line-height: 980%;
+            background-color: rgb(148, 207, 148);
+            
+        }
+        .text1:hover{
+            display: none;
+        }
         .content1 {
             font-size: 30px;
             width: 100%;
@@ -46,7 +59,7 @@
         .icon2 {
             width: 300px;
             border: solid;
-            background-color: rgb(250, 200, 255);
+            background-color: rgb(255, 228, 233);
         }
 
         .content2 {
@@ -62,11 +75,14 @@
             border: solid;
             height: 300px
         }
-
-        .icon3 {
-            width: 300px;
+        .icon3{
+            width: 350px;
             border: solid;
-            background-color: rgb(255, 251, 190);
+        }
+        .icon3:hover{
+            background: url("why.png");
+            background-size: 300px;
+            background-color: rgb(250, 250, 174);
         }
 
         .content3 {
@@ -89,7 +105,7 @@
         .icon4 {
             width: 300px;
             border: solid;
-            background-color: rgb(202, 220, 255);
+            background-color: skyblue;
         }
 
         .content4 {
@@ -98,14 +114,21 @@
             border:solid;
         }
 
-        .reverse {
-            flex-direction: row-reverse;
-        }
+    
         /* img */
         img{
             display: flex;
             margin:auto;
             
+        }
+        .text3{
+            font-size: 30px;
+            text-align: center;
+            line-height: 980%;
+            background-color: rgb(227, 235, 127);
+        }
+        .text3:hover{
+            display: none;
         }
     </style>
 </head>
@@ -115,7 +138,7 @@
     <div class="secondpage">
         <div class="line1">
             <div class="icon1">
-                <img src="./skinny_fat.png" width=280px>
+                <div class="text1">마른비만</div>
             </div>
             <div class="content1">
                 <p>겉으로 봐서는 건강하고 마른 몸매이지만 체지방률이 정상 수치를 초과하고 근육량은 정상 수치보다 못한 상태를 말한다.</p>
@@ -134,7 +157,7 @@
         </div>
         <div class="line3">
             <div class="icon3">
-                <img src="./why.png" width="280px">
+                <div class="text3">발병원인</div>
             </div>
             <div class="content3">
                 불규칙적인 식사습관이 주 원인이며, 운동부족 또한 마른비만의 원인이 될 수 있다.
