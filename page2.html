@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skiiny fat</title>
     <style>
-        body{
-            margin:0px
+        body {
+            margin: 0px
         }
+
         .secondpage {
             display: flex;
             flex-direction: column;
-            border:solid;
+            border: solid;
         }
 
         /* 1번째 줄 */
@@ -23,35 +24,42 @@
             height: 300px;
             width: 100%;
         }
+
         .icon1 {
             width: 360px;
             border: solid;
         }
-        .icon1:hover{
+
+        .icon1:hover {
             background: url("skinny_fat.png");
             background-size: 300px;
             background-color: rgb(80, 148, 80);
+            animation-name: slidein;
+            animation-duration: 2s;
         }
-        .text1{
+
+        .text1 {
             font-size: 30px;
             text-align: center;
             line-height: 983.5%;
             background-color: rgb(148, 207, 148);
-            
+
         }
-        .text1:hover{
+
+        .text1:hover {
             display: none;
         }
+
         .content1 {
             font-size: 20px;
             width: 100%;
-            border:solid;
+            border: solid;
         }
 
         .line2 {
             display: flex;
             flex-direction: row;
-            
+
             height: 300px
         }
 
@@ -59,24 +67,27 @@
             width: 360px;
             border: solid;
         }
-        .icon2:hover{
+
+        .icon2:hover {
             background: url("warning.png");
             background-size: 300px;
             background-color: pink;
         }
 
         .content2 {
-            font-size: 30px;
+            font-size: 20px;
             width: 100%;
-            border:solid;
+            border: solid;
         }
+
         .text2 {
             font-size: 30px;
             text-align: center;
             line-height: 983.5%;
             background-color: rgb(255, 228, 233);
         }
-        .text2:hover{
+
+        .text2:hover {
             display: none;
         }
 
@@ -87,30 +98,35 @@
             border: solid;
             height: 300px
         }
-        .icon3{
+
+        .icon3 {
             width: 360px;
             border-right: solid 5px;
         }
-        .icon3:hover{
+
+        .icon3:hover {
             background: url("why.png");
             background-size: 300px;
             background-color: rgb(250, 250, 174);
         }
-        .text3{
+
+        .text3 {
             font-size: 30px;
             text-align: center;
             line-height: 1000%;
             background-color: rgb(227, 235, 127);
         }
-        .text3:hover{
+
+        .text3:hover {
             display: none;
         }
+
         .content3 {
-            font-size: 30px;
+            font-size: 20px;
             width: 100%;
-            
+
         }
-       
+
         .line4 {
             display: flex;
             flex-direction: row;
@@ -124,34 +140,29 @@
             border-left: solid 5px;
             border-top: solid;
         }
-        .icon4:hover{
+
+        .icon4:hover {
             background: url("shield.png");
             background-size: 300px;
             background-color: skyblue;
         }
-        .text4{
+
+        .text4 {
             font-size: 30px;
             text-align: center;
             line-height: 990%;
             background-color: rgb(57, 149, 185);
         }
-        .text4:hover{
+
+        .text4:hover {
             display: none;
         }
-        .content4 {
-            font-size: 30px;
-            width: 100%;
-            border-top:solid;
-        }
 
-    
-        /* img */
-        img{
-            display: flex;
-            margin:auto;
-            
+        .content4 {
+            font-size: 20px;
+            width: 100%;
+            border-top: solid;
         }
-        
     </style>
 </head>
 
@@ -163,32 +174,45 @@
                 <div class="text1">마른비만</div>
             </div>
             <div class="content1">
-                <p>겉으로 봐서는 건강하고 마른 몸매이지만 체지방률이 정상 수치를 초과하고 근육량은 정상 수치보다 못한 상태를 말한다.</p>
-
-                <p>일반적으로 겉으로 잘 드러나는 비만과는 달리 내장지방이 쌓여서 인지하기 어렵고, 지방을 감량하기 힘든 것이 특징이다.</p>
+                <ul>
+                    <p><li>겉으로 봐서는 건강하고 마른 몸매이지만 체지방률이 정상 수치를 초과하고 근육량은 정상 수치보다 못한 상태를 말한다.</li></p>
+                    <p><li>일반적으로 겉으로 잘 드러나는 비만과는 달리 내장지방이 쌓여서 인지하기 어렵고, 지방을 감량하기 힘든 것이 특징이다.</li></p>
+                </ul>
             </div>
         </div>
         <div class="line2">
             <div class="content2">
-                심혈관질환을 유발하고, 당뇨병이나 대사증후군에 걸릴 확률이 높으며, 고혈압 발생위험이 증가한다.
+                <ul>
+                <li>심혈관질환을 유발하고, 당뇨병이나 대사증후군에 걸릴 확률이 높으며, 고혈압 발생위험이 증가한다.</li>
+            </ul>
             </div>
             <div class="icon2">
                 <div class="text2">위험성</div>
             </div>
-            
+
         </div>
         <div class="line3">
             <div class="icon3">
                 <div class="text3">발병원인</div>
             </div>
             <div class="content3">
-                불규칙적인 식사습관이 주 원인이며, 운동부족 또한 마른비만의 원인이 될 수 있다.
+                <ul>
+                <p><li>불규칙적인 식사습관이 주 원인이며, 굶거나 지나친 다이어트로 인해 발생하는 경우가 많다.</li></p>
+                <p><li>지나치게 자주 폭식이나 과식을 하는 사람은 비만, 혹은 마른비만일 가능성이 높다.</li></p>
+                <li>불규칙적인 식사습관이 주 원인이며, 운동부족 또한 마른비만의 원인이 될 수 있다.</li>
+            </ul>
             </div>
         </div>
         <div class="line4">
             <div class="content4">
-                <p>규칙적인 식습관을 가지고 과도한 탄수화물 섭취를 자제한다. 운동과 병행해서 할 경우 단백질 섭취를 늘리는 것이 중요하다. 운동을 할때 유산소 운동보다는 무산소 운동, 특히 고중량 저반복 위주의 트레이닝을 권장한다. </p>
-                <p>꾸준한 인바디체크를 통해 자신의 신체 상태를 측정하도록 한다.</p>
+                <ul>
+                <li>규칙적인 식습관을 가지고 과도한 탄수화물 섭취를 자제한다. 운동과 병행해서 할 경우</li>
+                <p>단백질 섭취를 늘리는 것이 중요하다. 운동을 할때 유산소 운동보다는 무산소 운동,</p>
+                <p>특히 고중량 저반복 위주의 트레이닝을 권장한다. </p>
+                <p><li>꾸준한 인바디체크를 통해 자신의 신체 상태를 측정하도록 한다.</li></p>
+                <p><li>식사는 완전히 배부르게 보다는 적당하게 먹는 것이 마른비만을 예방할 수 있다.</li></p>
+
+            </ul>
             </div>
             <div class="icon4">
                 <div class="text4">예방법</div>
