@@ -57,15 +57,28 @@
         }
 
         .icon2 {
-            width: 300px;
+            width: 350px;
             border: solid;
-            background-color: rgb(255, 228, 233);
+        }
+        .icon2:hover{
+            background: url("warning.png");
+            background-size: 300px;
+            background-color: pink;
         }
 
         .content2 {
             font-size: 30px;
             width: 100%;
             border:solid;
+        }
+        .text2 {
+            font-size: 30px;
+            text-align: center;
+            line-height: 980%;
+            background-color: rgb(255, 228, 233);
+        }
+        .text2:hover{
+            display: none;
         }
 
         /* 3,4번째 줄 */
@@ -84,15 +97,19 @@
             background-size: 300px;
             background-color: rgb(250, 250, 174);
         }
-
+        .text3{
+            font-size: 30px;
+            text-align: center;
+            line-height: 980%;
+            background-color: rgb(227, 235, 127);
+        }
+        .text3:hover{
+            display: none;
+        }
         .content3 {
             font-size: 30px;
             width: 100%;
             border:solid;
-        }
-
-        .reverse {
-            flex-direction: row-reverse;
         }
        
         .line4 {
@@ -103,11 +120,24 @@
         }
 
         .icon4 {
-            width: 300px;
+            width: 350px;
             border: solid;
+            
+        }
+        .icon4:hover{
+            background: url("shield.png");
+            background-size: 300px;
             background-color: skyblue;
         }
-
+        .text4{
+            font-size: 30px;
+            text-align: center;
+            line-height: 980%;
+            background-color: rgb(57, 149, 185);
+        }
+        .text4:hover{
+            display: none;
+        }
         .content4 {
             font-size: 30px;
             width: 100%;
@@ -121,15 +151,7 @@
             margin:auto;
             
         }
-        .text3{
-            font-size: 30px;
-            text-align: center;
-            line-height: 980%;
-            background-color: rgb(227, 235, 127);
-        }
-        .text3:hover{
-            display: none;
-        }
+        
     </style>
 </head>
 
@@ -151,7 +173,7 @@
                 심혈관질환을 유발하고, 당뇨병이나 대사증후군에 걸릴 확률이 높으며, 고혈압 발생위험이 증가한다.
             </div>
             <div class="icon2">
-                <img src="./warning.png" width="280px">
+                <div class="text2">위험성</div>
             </div>
             
         </div>
@@ -169,7 +191,7 @@
                 <p>꾸준한 인바디체크를 통해 자신의 신체 상태를 측정하도록 한다.</p>
             </div>
             <div class="icon4">
-                <img src="./shield.png" width="280px">
+                <div class="text4">예방법</div>
             </div>
         </div>
     </div>
