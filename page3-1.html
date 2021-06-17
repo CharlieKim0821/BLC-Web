@@ -7,16 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team page</title>
     <style>
-        body{
-            margin:0px;
+        body {
+            margin: 0px;
         }
+
         .header {
             background-color: white;
             height: 60px;
             flex-direction: row;
             display: flex;
             border: solid;
-            
+            background-image: url("BLC_Logo.png");
+            background-size: 60px;
+            background-repeat: no-repeat;
             border-width: 5px;
         }
 
@@ -25,58 +28,124 @@
             flex-direction: row;
             margin: 30px;
         }
-        .mainbox{
+
+        .mainbox {
             display: flex;
             flex-direction: column;
-            border:solid;
+            border: solid;
         }
-        .vision{
+
+        .vision {
             display: flex;
             border-bottom: solid;
             height: 300px;
         }
-        .vision_text{
+
+        .vision_text {
             text-align: center;
-            margin:auto;
+            margin: auto;
             font-size: 30px;
         }
-        .mid{
+
+        .mid {
             display: flex;
             flex-direction: row;
             height: 250px;
             border-bottom: solid;
-           
+
         }
-        .team1{
+
+        .team1 {
             border-right: solid;
+            background-color: rgb(148, 207, 148);
+            position: relative;
         }
-        .bottom{
+
+        .team1:after {
+            background-image: url("김찰리.png");
+            background-size: 900px;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+        }
+        .team2{
+            background-color: pink;
+        }
+        .team2:after{
+            background-image: url("이레넌.png");
+            background-size: 900px;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+        }
+
+        .bottom {
             display: flex;
             flex-direction: row;
             height: 300px;
         }
-        .team1,.team2{
+
+        .team1,
+        .team2 {
             flex: 50%;
             text-align: center;
             font-size: 30px;
-            line-height: 850%;
+            line-height: 100%;
             font-weight: bold;
+            position: relative;
+
         }
-        .team3{
+
+        .team3 {
             border-right: solid;
+            position: relative;
+            background-color:rgb(250, 250, 174);
         }
-        .team5{
+        .team3:after{
+            background-image: url("김유성.png");
+            background-size: 600px;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+        }
+        .team5 {
             border-left: solid;
         }
-        .team3, .team5, .team4{
-            flex:33%;
+
+        .team3,
+        .team5,
+        .team4 {
+            flex: 33%;
             text-align: center;
             font-size: 30px;
             line-height: 1000%;
             font-weight: bold;
         }
-        
-        p{
+
+        .레넌,
+        .찰리 {
+            text-align: center;
+            font-size: 30px;
+            line-height: 900%;
+            font-weight: bold;
+        }
+
+        p {
             margin-top: 5px;
             margin-bottom: 5px;
             font-weight: bolder;
@@ -98,14 +167,18 @@
     <div class="mainbox">
         <div class="vision">
             <div class="vision_text">
-            <p>우리는 사람들이 ‘마른비만’ 이라는</p>
-            <p>겉모습에 감춰진 질병으로부터</p>
-            <p>건강을 잃지 않기 위해 노력합니다.</p>
-        </div>
+                <p>우리는 사람들이 ‘마른비만’ 이라는</p>
+                <p>겉모습에 감춰진 질병으로부터</p>
+                <p>건강을 잃지 않기 위해 노력합니다.</p>
+            </div>
         </div>
         <div class="mid">
-            <div class="team1">찰리</div>
-            <div class="team2">레넌</div>
+            <div class="team1">
+                <div class="찰리">찰리</div>
+            </div>
+            <div class="team2">
+                <div class="레넌">레넌</div>
+            </div>
         </div>
         <div class="bottom">
             <div class="team3">유성</div>
