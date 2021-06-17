@@ -94,7 +94,6 @@
 
 
         .bigbox1>a {
-
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -168,7 +167,7 @@
         }
 
         .bigbox2 {
-            width: 100%;
+            flex: 1;
             height: 350px;
             display: flex;
             flex-direction: row;
@@ -177,16 +176,22 @@
         .box4 {
             font-size: 40px;
             font-weight: bold;
-            width: 40%;
+            flex: 1;
             height: 350px;
             background-color: rgb(250, 250, 174);
             border: solid;
             border-width: 5px;
         }
 
-        .box4:hover {
+        .bigbox2>a {
+            display: inline-block;
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+        }
 
-            width: 40%;
+        .box4:hover {
+            flex: 1;
             height: 350px;
             color: rgb(60, 60, 60);
             background-color: rgb(243, 243, 76);
@@ -197,7 +202,7 @@
 
         .box5 {
             font-weight: bold;
-            width: 60%;
+            flex: 1;
             height: 350px;
             background-color: skyblue;
             border: solid;
@@ -286,7 +291,10 @@
         </div>
 
         <div class="bigbox2">
-            <div class="box4">History</div>
+            <a href="./page4.html">
+                <div class="box4">History</div>
+            </a>
+
             <div class="box5">
                 <div class="left bottom">
                     <div class="text4">문의하기</div>
