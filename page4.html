@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carousel</title>
   <style>
+    .bigbox{
+      border:solid;
+      width:60%;
+      
+    }
     .container {
       width: 100vw;
     }
@@ -26,24 +31,26 @@
 </head>
 
 <body>
-  <div class="container">
-    <div id="slides" class="slides">
-      <div class="slide">
-        <img
-          src="https://images.unsplash.com/photo-1622495805962-d93109c8def4?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
-      </div>
-      <div class="slide">
-        <img
-          src="https://images.unsplash.com/photo-1623611659533-05cb5561fd5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" />
-      </div>
-      <div class="slide">
-        <img
-          src="https://images.unsplash.com/photo-1623593420942-5c4587c1eef2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
+  <div class="bigbox">
+    <div class="container">
+      <div id="slides" class="slides">
+        <div class="slide">
+          <img
+            src="https://images.unsplash.com/photo-1622495805962-d93109c8def4?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
+        </div>
+        <div class="slide">
+          <img
+            src="https://images.unsplash.com/photo-1623611659533-05cb5561fd5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" />
+        </div>
+        <div class="slide">
+          <img
+            src="https://images.unsplash.com/photo-1623593420942-5c4587c1eef2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
+        </div>
       </div>
     </div>
+    <button id="prev">이전</button>
+    <button id="next">다음</button>
   </div>
-  <button id="prev">이전</button>
-  <button id="next">다음</button>
 
   <script>
     var page = 0;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bigbox {
+            width: 900px;
+            height: 600px;
+            border: solid;
+            margin: auto;
+            margin-top: 10%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: flex;
+            flex-direction: row;
+            width: 300vw;
+            transition: transform 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    <div class="bigbox">
+        <div id="slide" class="slide">
+            <div class="picture">
+                <img src="ㄹㅇ하찮다.jpg" height=600px>
+            </div>
+            <div class="picture">
+                <img src="하찮다.jpg" height=600px>
+            </div>
+            <div class="picture">
+                <img src="에에.jpg" height=600px>
+            </div>
+        </div>
+        
+    </div>
+    <button id="prev">이전</button>
+        <button id="next">다음</button>
+</div>
+    <script>
+        var page = 0;
+    
+        document.getElementById("prev").addEventListener('click', function () {
+          // 페이지 변경
+          if (page != 0) {
+            page = page - 1;
+            // 변견된 페이지에 맞게 transfor 지정
+            document.getElementById("slide").style.transform = `translate(-${page * 900}px)`
+          }
+        })
+        document.getElementById("next").addEventListener('click', function () {
+          if (page != 2) {
+            page = page + 1;
+            document.getElementById("slide").style.transform = `translate(-${page * 900}px)`
+          }
+        })
+      </script>
+</body>
+
+</html>
