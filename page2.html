@@ -7,7 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skiiny fat</title>
     <style>
+        @font-face {
+            font-family: 'GongGothicMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
+            font-family: 'GongGothicMedium';
             margin: 0px
         }
 
@@ -19,8 +26,15 @@
             border: solid;
             border-bottom: none;
             border-width: 5px;
+            background-image: url("BLC_Logo.png");
+            background-size: 60px;
+            background-repeat: no-repeat;
         }
-
+        .BLC{
+            margin-top: 3px;
+            margin-left: 70px;
+            font-size: 50px;
+        }
         .headernaeyong {
             display: flex;
             flex-direction: row;
@@ -184,7 +198,7 @@
 
 <body>
     <div class="header">
-        <div class="BLC"></div>
+        <div class="BLC">BLC</div>
         <div class="empty1"></div>
         <div class="headernaeyong">
             <div></div>

@@ -65,7 +65,6 @@
         }
 
         .box2 {
-            font-size: 30px;
             height: 50%;
             border: solid;
             border-width: 5px;
@@ -75,7 +74,7 @@
 
         .text {
             font-weight: bold;
-            font-size: 30px;
+            font-size: 40px;
             text-align: bottom;
         }
 
@@ -90,6 +89,7 @@
         .box2:hover>.text1 {
             display: block;
             font-size: 25px;
+            color: rgb(60, 60, 60);
             background-color: rgb(80, 148, 80);
             height: 100%;
         }
@@ -97,7 +97,6 @@
 
 
         .box3 {
-            font-size: 30px;
             height: 50%;
             background-color: rgb(255, 228, 233);
             border: solid;
@@ -107,7 +106,7 @@
         .text2 {
             display: flex;
             font-weight: bold;
-            font-size: 30px;
+            font-size: 40px;
 
         }
 
@@ -122,6 +121,7 @@
         .box3:hover>.text3 {
             display: block;
             font-size: 25px;
+            color: rgb(60, 60, 60);
             background-color: pink;
             height: 100%;
         }
@@ -134,7 +134,7 @@
         }
 
         .box4 {
-            font-size: 30px;
+            font-size: 40px;
             font-weight: bold;
             width: 40%;
             height: 350px;
@@ -147,6 +147,7 @@
 
             width: 40%;
             height: 350px;
+            color: rgb(60, 60, 60);
             background-color: rgb(243, 243, 76);
             border: solid;
             border-width: 5px;
@@ -154,7 +155,6 @@
 
 
         .box5 {
-            font-size: 30px;
             font-weight: bold;
             width: 60%;
             height: 350px;
@@ -167,7 +167,7 @@
 
         .text4 {
             display: flex;
-            font-size: 30px;
+            font-size: 40px;
 
         }
 
@@ -175,13 +175,34 @@
             display: none;
         }
 
-        .box5:hover>.text4 {
+        .box5 {
+            position: relative
+        }
+
+        .box5:hover {
+            background-color: rgb(57, 149, 185);
+
+
+        }
+
+        .left {
+            position: absolute;
+            left: 0;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .box5:hover>div>.text4 {
             display: none;
         }
 
-        .box5:hover>.text5 {
+        .box5:hover>div>.text5 {
             display: flex;
             font-size: 40px;
+            color: rgb(60, 60, 60);
             background-color: rgb(57, 149, 185);
             height: 100%;
         }
@@ -222,9 +243,11 @@
         <div class="bigbox2">
             <div class="box4">History</div>
             <div class="box5">
-                <div class="text4">문의하기</div>
-                <div class="text5">☎ 010-2211-3019
-                    📧 behealthyblc@gmail.com</div>
+                <div class="left bottom">
+                    <div class="text4">문의하기</div>
+                    <div class="text5">☎ 010-2211-3019
+                        📧 behealthyblc@gmail.com</div>
+                </div>
 
             </div>
         </div>
