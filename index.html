@@ -18,7 +18,31 @@
         body {
             font-family: 'GongGothicMedium';
             margin: 0;
+
         }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        a:focus {
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:active {
+            text-decoration: none;
+        }
+
 
         .header {
             background-color: white;
@@ -68,6 +92,14 @@
             line-height: 3300%;
         }
 
+
+        .bigbox1>a {
+
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
         .bigbox1 {
             flex: 0.4;
             display: flex;
@@ -75,7 +107,7 @@
         }
 
         .box2 {
-            height: 50%;
+            height: 100%;
             border: solid;
             border-width: 5px;
             background-color: rgb(148, 207, 148);
@@ -85,7 +117,6 @@
         .text {
             font-weight: bold;
             font-size: 40px;
-            text-align: bottom;
         }
 
         .text1 {
@@ -107,7 +138,7 @@
 
 
         .box3 {
-            height: 50%;
+            flex: 1;
             background-color: rgb(255, 228, 233);
             border: solid;
             border-width: 5px;
@@ -237,16 +268,20 @@
                 <div>We want everyone to <strong>BLC</strong> from <strong>“Skinny Fat”</strong></div>
             </div>
             <div class="bigbox1">
-                <div class="box2">
-                    <div class="text">팀 소개</div>
-                    <div class="text1">우리는 사람들이 <strong>‘마른비만’</strong> 이라는 겉모습에 감춰진 질병으로부터 건강을 잃지 않기 위해 노력합니다.</div>
+                <a href="./page3-1.html">
+                    <div class="box2">
+                        <div class="text">팀 소개</div>
+                        <div class="text1">우리는 사람들이 <strong>‘마른비만’</strong> 이라는 겉모습에 감춰진 질병으로부터 건강을 잃지 않기 위해 노력합니다.
+                        </div>
+                    </div>
+                </a>
 
-                </div>
-
-                <div class="box3">
-                    <div class="text2">마른비만?</div>
-                    <div class="text3">마른 비만은 <strong>겉으로 잘 드러나지 않는</strong> 비만상태를 이야기합니다.</div>
-                </div>
+                <a href="./page2.html">
+                    <div class="box3">
+                        <div class="text2">마른비만?</div>
+                        <div class="text3">마른 비만은 <strong>겉으로 잘 드러나지 않는</strong> 비만상태를 이야기합니다.</div>
+                    </div>
+                </a>
             </div>
         </div>
 
