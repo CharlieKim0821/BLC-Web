@@ -5,16 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>History page</title>
     <style>
+        @font-face {
+            font-family: 'GongGothicMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'GongGothicMedium';
+            margin: 0;
+        }
+
+        .header {
+            background-color: white;
+            height: 60px;
+            flex-direction: row;
+            display: flex;
+            border: solid 10px;
+            background-image: url("BLC_Logo.png");
+            background-size: 60px;
+            background-repeat: no-repeat;
+        }
+
+        .headernaeyong {
+            display: flex;
+            flex-direction: row;
+            margin: 30px;
+        }
+
+        .BLC {
+            margin-top: 3px;
+            margin-left: 70px;
+            font-size: 50px;
+        }
+
         .bigbox {
+            display: flex;
+            flex-direction: row;
             width: 750px;
             height: 600px;
             border: solid;
             margin: auto;
-            margin-top: 10%;
-            position: relative;
+            margin-top: 7%;
             overflow: hidden;
+            position: relative;
+            align-items: center;
+            padding: 0;
         }
 
         .slide {
@@ -22,47 +61,96 @@
             flex-direction: row;
             width: 300vw;
             transition: transform 0.5s;
+
+
+        }
+
+        .prev {
+            background-color: white;
+            width: 50px;
+            height: 200px;
+            position: absolute;
+            left: 20px;
+            border: solid;
+            border-radius: 10px;
+            opacity: 0;
+            transition: 0.1s;
+            z-index: 10;
+            margin:0;
+        }
+
+        .prev:hover {
+            opacity: 1;
+        }
+
+        .next:hover{
+            opacity: 1;
+        }
+
+        .next {
+            background-color: white;
+            width: 50px;
+            height: 200px;
+            position: absolute;
+            right: 20px;
+            border: solid;
+            border-radius: 10px;
+            opacity: 0;
+            transition: 0.1s;
+            margin:0;
         }
     </style>
 </head>
 
 <body>
     <div>
-    <div class="bigbox">
-        <div id="slide" class="slide">
-            <div class="picture">
-                <img src="test1.jpg" height=600px>
-            </div>
-            <div class="picture">
-                <img src="test2.jpg" height=600px>
-            </div>
-            <div class="picture">
-                <img src="test3.jpg" height=600px>
+        <div class="header">
+            <div class="BLC">BLC</div>
+            <div class="empty1"></div>
+            <div class="headernaeyong">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
-        
+        <div class="bigbox">
+            
+                <button id="prev" class="prev"></button>
+            <div id="slide" class="slide">
+
+                <div class="picture">
+                    <img src="history 2021_5_10.png" height=600px>
+                </div>
+                <div class="picture">
+                    <img src="운동전문가.png" height=600px>
+                </div>
+                <div class="picture">
+                    <img src="test3.jpg" height=600px>
+                </div>
+            </div>
+                <button id="next" class="next"></button>
+        </div>
     </div>
-    <button id="prev">이전</button>
-        <button id="next">다음</button>
-</div>
+
     <script>
         var page = 0;
-    
+
         document.getElementById("prev").addEventListener('click', function () {
-          // 페이지 변경
-          if (page != 0) {
-            page = page - 1;
-            // 변견된 페이지에 맞게 transfor 지정
-            document.getElementById("slide").style.transform = `translate(-${page * 900}px)`
-          }
+            // 페이지 변경
+            if (page != 0) {
+                page = page - 1;
+                // 변견된 페이지에 맞게 transfor 지정
+                document.getElementById("slide").style.transform = `translate(-${page * 750}px)`
+            }
         })
         document.getElementById("next").addEventListener('click', function () {
-          if (page != 2) {
-            page = page + 1;
-            document.getElementById("slide").style.transform = `translate(-${page * 900}px)`
-          }
+            if (page != 2) {
+                page = page + 1;
+                document.getElementById("slide").style.transform = `translate(-${page * 750}px)`
+            }
         })
-      </script>
+    </script>
 </body>
 
 </html>
