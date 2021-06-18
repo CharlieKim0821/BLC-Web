@@ -30,19 +30,15 @@
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: none;
-        }
 
         a:focus {
             text-decoration: none;
         }
 
-        a:hover,
+
         a:active {
             text-decoration: none;
         }
-
 
         .header {
             background-color: white;
@@ -80,8 +76,9 @@
             flex-direction: row;
         }
 
-        .box1 {
-            font-size: 40px;
+        .mainbox {
+            position: relative;
+            font-size: 45px;
             flex: 0.6;
             height: 700px;
             display: flex;
@@ -89,7 +86,6 @@
             background-color: white;
             border: solid;
             border-width: 5px;
-            line-height: 3300%;
         }
 
 
@@ -105,66 +101,75 @@
             flex-direction: column;
         }
 
-        .box2 {
+        .team {
             height: 100%;
             border: solid;
             border-width: 5px;
             background-color: rgb(148, 207, 148);
-
+            position: relative;
         }
 
-        .text {
+        .teamtext {
             font-weight: bold;
-            font-size: 40px;
+            font-size: 50px;
         }
 
-        .text1 {
+        .teamtext1 {
             display: none;
         }
 
-        .box2:hover>.text {
+        .team:hover {
+            background-color: rgb(80, 148, 80);
+        }
+
+        .team:hover>div>.teamtext {
             display: none;
         }
 
-        .box2:hover>.text1 {
+        .team:hover>div>.teamtext1 {
             display: block;
-            font-size: 25px;
+            font-size: 35px;
             color: rgb(60, 60, 60);
             background-color: rgb(80, 148, 80);
             height: 100%;
         }
 
 
-
-        .box3 {
+        .fat {
             flex: 1;
             background-color: rgb(255, 228, 233);
             border: solid;
             border-width: 5px;
+            position: relative;
         }
 
-        .text2 {
+        .fattext2 {
             display: flex;
             font-weight: bold;
-            font-size: 40px;
-
+            font-size: 50px;
         }
 
-        .text3 {
+        .fattext3 {
             display: none;
         }
 
-        .box3:hover>.text2 {
+        .fat:hover {
+            background-color: pink;
+        }
+
+        .fat:hover>div>.fattext2 {
             display: none;
         }
 
-        .box3:hover>.text3 {
+        .fat:hover>div>.fattext3 {
             display: block;
-            font-size: 25px;
+            font-size: 37px;
             color: rgb(60, 60, 60);
             background-color: pink;
             height: 100%;
         }
+
+
 
         .bigbox2 {
             flex: 1;
@@ -173,8 +178,14 @@
             flex-direction: row;
         }
 
-        .box4 {
-            font-size: 40px;
+        .bigbox2>a {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+        }
+
+        .history {
+            display: flex;
             font-weight: bold;
             flex: 1;
             height: 350px;
@@ -183,24 +194,41 @@
             border-width: 5px;
         }
 
-        .bigbox2>a {
-            display: inline-block;
-            flex: 1;
+        .text3-1 {
             display: flex;
-            flex-direction: row;
+            font-size: 50px;
         }
 
-        .box4:hover {
-            flex: 1;
-            height: 350px;
+        .text3-2 {
+            display: none;
+        }
+
+        .history {
+            position: relative
+        }
+
+        .history:hover {
+            background-color: rgb(227, 235, 127);
+        }
+
+        .history:hover>div>.text3-1 {
+            display: none;
+        }
+
+        .history:hover>div>.text3-2 {
+            display: flex;
+            font-size: 50px;
             color: rgb(60, 60, 60);
-            background-color: rgb(243, 243, 76);
-            border: solid;
-            border-width: 5px;
+            background-color: rgb(227, 235, 127);
+            height: 100%;
         }
 
 
-        .box5 {
+
+
+
+        .contact {
+            display: flex;
             font-weight: bold;
             flex: 1;
             height: 350px;
@@ -209,26 +237,33 @@
             border-width: 5px;
         }
 
-
-
         .text4 {
             display: flex;
-            font-size: 40px;
-
+            font-size: 50px;
         }
 
         .text5 {
             display: none;
         }
 
-        .box5 {
+        .contact {
             position: relative
         }
 
-        .box5:hover {
+        .contact:hover {
             background-color: rgb(57, 149, 185);
+        }
 
+        .contact:hover>div>.text4 {
+            display: none;
+        }
 
+        .contact:hover>div>.text5 {
+            display: flex;
+            font-size: 50px;
+            color: rgb(60, 60, 60);
+            background-color: rgb(57, 149, 185);
+            height: 100%;
         }
 
         .left {
@@ -240,18 +275,6 @@
             position: absolute;
             bottom: 0;
         }
-
-        .box5:hover>div>.text4 {
-            display: none;
-        }
-
-        .box5:hover>div>.text5 {
-            display: flex;
-            font-size: 40px;
-            color: rgb(60, 60, 60);
-            background-color: rgb(57, 149, 185);
-            height: 100%;
-        }
     </style>
 
 </head>
@@ -259,7 +282,9 @@
 <body>
     <div class="main">
         <div class="header">
-            <div class="BLC">BLC</div>
+            <a href="index.html">
+                <div class="BLC">BLC</div>
+            </a>
             <div class="empty1"></div>
             <div class="headernaeyong">
                 <div></div>
@@ -268,42 +293,57 @@
                 <div></div>
             </div>
         </div>
+
         <div class="naeyong">
-            <div class="box1">
-                <div>We want everyone to <strong>BLC</strong> from <strong>“Skinny Fat”</strong></div>
+            <div class="mainbox">
+                <div class="left bottom">
+                    <div>We want everyone to <strong>BLC</strong> from <strong>“Skinny Fat”</strong></div>
+                </div>
             </div>
             <div class="bigbox1">
                 <a href="./page3-1.html">
-                    <div class="box2">
-                        <div class="text">팀 소개</div>
-                        <div class="text1">우리는 사람들이 <strong>‘마른비만’</strong> 이라는 겉모습에 감춰진 질병으로부터 건강을 잃지 않기 위해 노력합니다.
+                    <div class="team">
+                        <div class="left bottom">
+                            <div class="teamtext">팀 소개</div>
+                            <div class="teamtext1">우리는 사람들이 <strong>‘마른비만’</strong> 이라는 겉모습에 감춰진 질병으로부터 건강을 잃지 않기 위해
+                                노력합니다.
+                            </div>
                         </div>
                     </div>
                 </a>
 
                 <a href="./page2.html">
-                    <div class="box3">
-                        <div class="text2">마른비만?</div>
-                        <div class="text3">마른 비만은 <strong>겉으로 잘 드러나지 않는</strong> 비만상태를 이야기합니다.</div>
+                    <div class="fat">
+                        <div class="left bottom">
+                            <div class="fattext2">마른비만?</div>
+                            <div class="fattext3">마른 비만은 <strong>겉으로 잘 드러나지 않는</strong>
+                                비만상태를 이야기합니다.</div>
+                        </div>
                     </div>
-                </a>
             </div>
-        </div>
-
-        <div class="bigbox2">
-            <a href="./page4-1.html">
-                <div class="box4">History</div>
             </a>
-
-            <div class="box5">
-                <div class="left bottom">
-                    <div class="text4">문의하기</div>
-                    <div class="text5">☎ 010-2211-3019
-                        📧 behealthyblc@gmail.com</div>
-                </div>
-
-            </div>
         </div>
+    </div>
+
+    <div class="bigbox2">
+        <a href="./page4-1.html">
+            <div class="history">
+                <div class="left bottom">
+                    <div class="text3-1">History</div>
+                    <div class="text3-2">History</div>
+                </div>
+            </div>
+        </a>
+
+        <div class="contact">
+            <div class="left bottom">
+                <div class="text4">문의하기</div>
+                <div class="text5">☎ 010-2211-3019
+                    📧 behealthyblc@gmail.com</div>
+            </div>
+
+        </div>
+    </div>
     </div>
 </body>
 
