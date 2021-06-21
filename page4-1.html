@@ -18,6 +18,7 @@
             font-family: 'GongGothicMedium';
             margin: 0;
         }
+
         a {
             text-decoration: none;
             color: black;
@@ -36,6 +37,7 @@
         a:active {
             text-decoration: none;
         }
+
         .header {
             background-color: white;
             height: 60px;
@@ -93,14 +95,14 @@
             opacity: 0;
             transition: 0.1s;
             z-index: 10;
-            margin:0;
+            margin: 0;
         }
 
         .prev:hover {
             opacity: 1;
         }
 
-        .next:hover{
+        .next:hover {
             opacity: 1;
         }
 
@@ -114,7 +116,50 @@
             border-radius: 10px;
             opacity: 0;
             transition: 0.1s;
-            margin:0;
+            margin: 0;
+        }
+
+        .picture {
+            height: 600px;
+        }
+
+        .picture1 {
+            display: none;
+        }
+
+        @media(max-width:700px) {
+            .picture {
+                display: none;
+            }
+
+            .picture1 {
+                height: 300px;
+                display: flex;
+                margin: auto;
+            }
+
+            .bigbox {
+                height: 280px;
+                width: 350px;
+            }
+
+            .slide {
+
+                display: flex;
+                flex-direction: row;
+            }
+
+            .next {
+                width: 25px;
+                height: 25px;
+                border-radius: 25px;
+            }
+
+            .prev {
+                width: 25px;
+                height: 25px;
+                border-radius: 25px;
+            }
         }
     </style>
 </head>
@@ -123,7 +168,7 @@
     <div>
         <div class="header">
             <a href="index.html">
-            <div class="BLC">BLC</div>
+                <div class="BLC">BLC</div>
             </a>
             <div class="empty1"></div>
             <div class="headernaeyong">
@@ -134,21 +179,31 @@
             </div>
         </div>
         <div class="bigbox">
-            
-                <button id="prev" class="prev"></button>
+
+            <button id="prev" class="prev"></button>
             <div id="slide" class="slide">
 
                 <div class="picture">
-                    <img src="history 2021_5_10.png" height=600px>
+                    <img src="history 2021_5_10.png">
                 </div>
                 <div class="picture">
-                    <img src="운동전문가.png" height=600px>
+                    <img src="운동전문가.png">
                 </div>
                 <div class="picture">
-                    <img src="test3.jpg" height=600px>
+                    <img src="test3.jpg">
+                </div>
+
+                <div class="picture1">
+                    <img src="history 2021_5_10.png">
+                </div>
+                <div class="picture1">
+                    <img src="운동전문가.png">
+                </div>
+                <div class="picture1">
+                    <img src="test3.jpg">
                 </div>
             </div>
-                <button id="next" class="next"></button>
+            <button id="next" class="next"></button>
         </div>
     </div>
 
@@ -168,6 +223,7 @@
                 page = page + 1;
                 document.getElementById("slide").style.transform = `translate(-${page * 750}px)`
             }
+
         })
     </script>
 </body>
