@@ -166,15 +166,53 @@
 
         }
 
-        @media(max-width:900px) {
-            .mid {
-                display: flex;
-                flex-direction: column;
-            }
-            .vision_text{
-                font-size: 25px;
-                margin-bottom: 10px;
-            }
+        .btn-menu {
+            right: 10px;
+            position: absolute;
+            float: right;
+            width: 60px;
+            height: 60px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            background: #fff;
+        }
+
+        .btn-menu:before,
+        .btn-menu:after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 36px;
+            height: 3px;
+            background: #000;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            -webkit-transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .btn-menu:before {
+            margin-top: -8px;
+        }
+
+        .btn-menu:after {
+            margin-top: 4px;
+        }
+
+        .btn-menu.active:before {
+            margin-top: -2px;
+            -webkit-transform: translateX(-50%) rotate(45deg) translateZ(0);
+            transform: translateX(-50%) rotate(45deg) translateZ(0);
+        }
+
+        .btn-menu.active:after {
+            margin-top: -2px;
+            -webkit-transform: translateX(-50%) rotate(-45deg) translateZ(0);
+            transform: translateX(-50%) rotate(-45deg) translateZ(0);
+        }
+
         }
     </style>
 </head>
@@ -184,13 +222,13 @@
         <a href="index.html">
             <div class="BLC">BLC</div>
         </a>
-        <div class="empty1"></div>
-        <div class="headernaeyong">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <a href="javascript:;" class="btn-menu"></a>
+        <script>
+            document.querySelector('.btn-menu').addEventListener('click', function () {
+                this.classList.toggle('active');
+            });
+        </script>
+
     </div>
     <div class="mainbox">
         <div class="vision">
