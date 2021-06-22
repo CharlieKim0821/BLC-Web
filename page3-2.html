@@ -129,6 +129,7 @@
         .content {
             margin-top: 20px;
             text-align: center;
+            font-size: 25px;
         }
 
         .team2 {
@@ -151,7 +152,21 @@
             border: solid;
             background-color: rgb(250, 250, 174);
         }
-
+        .content{
+            font-size: 20px;
+        }
+        .content {
+            font-size: 20px;
+        }
+            .content2{
+                font-size: 20px;
+            }
+            .content3{
+                font-size: 20px;
+            }
+        .김찰리, .이레넌, .김유성{
+            border:solid 5px;
+        }
         .레넌,
         .찰리,
         .유성 {
@@ -186,12 +201,37 @@
         .title {
             margin: 10px;
         }
+        @media(max-width:1000px){
+            .김찰리,.이레넌,.김유성{
+                width: 200px;
+            }
+            .content{
+                margin-top: 25px;
+            }
+            .content2{
+                font-size: 20px;
+                margin-top: 0px;
+            }
+            .content3{
+                font-size: 20px;
+                margin-top: 0px;
+            }
+        }
+        
 
         @media(max-width: 700px) {
 
             .mid {
                 display: flex;
                 flex-direction: column;
+            }
+            .content {
+            font-size: 15px;
+            margin-top: 10px;
+        }
+            .content2{
+                font-size: 15px;
+                margin-top: 0px;
             }
 
             .btn-menu {
@@ -324,18 +364,28 @@
         <div class="mid">
             <div class="team1">
                 <img class="김찰리" src="김찰리.png">
-                <div class="찰리">찰리(리더/막내)</div>
-                <div class=content>안녕하세요? 찰리입니다. 잘부탁드립니다.</div>
+                <div class="찰리">찰리</div>
+                <div>(리더/막내)</div>
+                <div class=content>건강에 관심을 가지게 되며</div>
+                <div class="content2">프로젝트를 진행하고 있는</div>
+                <div class="content3">찰리입니다</div>
             </div>
             <div class="team2">
-                <img class="이레넌" src="바보.png">
-                <div class="레넌">레넌(디자인/꼬맹이)</div>
-                <div class=content>안녕하세요? 레넌입니다. 잘부탁드립니다.</div>
+                <img class="이레넌" src="이레넌.png">
+                <div class="레넌">레넌</div>
+                <div class="역할">(디자인/꼬맹이)</div>
+                <div class=content>지피지기 백전백승!</div> 
+                <div class="content2">비만을 알고 대응하기 위해</div>
+                <div class="content3">프로젝트를 하고 있는</div>
+                <div class="content2">레넌입니다.</div>
             </div>
             <div class="team3">
-                <img class="김유성" src="익명.png">
-                <div class="유성">유성()</div>
-                <div class=content>안녕하세요? 유성입니다. 잘부탁드립니다.</div>
+                <img class="김유성" src="김유성.png">
+                <div class="유성">유성</div>
+                <div class="역할">(팀원/짬밥왕)</div>
+                <div class=content>여러분들의 건강을 위해</div> 
+                <div class="content2">프로젝트를 진행하고 있는 
+                <div class="content2">유성입니다</div>
             </div>
         </div>
 </body>
