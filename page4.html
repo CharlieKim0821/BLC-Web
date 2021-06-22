@@ -2,74 +2,469 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carousel</title>
-  <style>
-    .bigbox{
-      border:solid;
-      width:60%;
-      
-    }
-    .container {
-      width: 100vw;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
 
-    .slides {
-      width: 300vw;
-      display: flex;
-      flex-direction: row;
-      transition: transform 0.5s;
-    }
+    <style>
+        @font-face {
+            font-family: 'GongGothicMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-    .slide {
-      width: 100vw;
-      background-color: red;
-    }
-  </style>
+        body {
+            font-family: 'GongGothicMedium';
+            margin: 0;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+
+        a:focus {
+            text-decoration: none;
+        }
+
+
+        a:active {
+            text-decoration: none;
+        }
+
+        .header {
+            background-color: white;
+            height: 60px;
+            flex-direction: row;
+            display: flex;
+            border: solid;
+            border-width: 5px;
+            background-image: url("BLC_Logo.png");
+            background-size: 60px;
+            background-repeat: no-repeat;
+        }
+
+        .BLC {
+            margin-top: 3px;
+            margin-left: 70px;
+            font-size: 50px;
+        }
+
+        .headernaeyong {
+            display: flex;
+            flex-direction: row;
+            margin: 30px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            border: solid;
+            border-width: 5px;
+        }
+
+        .alldiv {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .leftdiv {
+            display: flex;
+            flex: 1;
+            border: 20px black;
+
+        }
+
+        .allcontent {
+            display: flex;
+            flex-direction: column;
+            flex: 5;
+        }
+
+        .rightdiv {
+            display: flex;
+            flex: 1;
+            border: 20px black;
+        }
+
+        .boldtext {
+            font-size: 55px;
+        }
+
+        .naeyong {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .mainbox {
+            position: relative;
+            font-size: 50px;
+            flex: 0.6;
+            height: 700px;
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border: solid;
+            border-width: 5px;
+        }
+
+        .longtext {
+            height: 400px;
+            flex: 1;
+
+        }
+
+        .bigbox1>a {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bigbox1 {
+            flex: 0.4;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team {
+            height: 100%;
+            border: solid;
+            border-width: 5px;
+            background-color: rgb(148, 207, 148);
+            position: relative;
+        }
+
+        .teamtext {
+            font-weight: bold;
+            font-size: 50px;
+        }
+
+        .teamtext1 {
+            display: none;
+        }
+
+        .team:hover {
+            background-color: rgb(80, 148, 80);
+        }
+
+        .team:hover>div>.teamtext {
+            display: none;
+        }
+
+        .team:hover>div>.teamtext1 {
+            display: block;
+            font-size: 35px;
+            color: rgb(60, 60, 60);
+            background-color: rgb(80, 148, 80);
+            height: 100%;
+        }
+
+        .fat {
+            flex: 1;
+            background-color: rgb(255, 228, 233);
+            border: solid;
+            border-width: 5px;
+            position: relative;
+        }
+
+        .fattext2 {
+            display: flex;
+            font-weight: bold;
+            font-size: 50px;
+        }
+
+        .fattext3 {
+            display: none;
+        }
+
+        .fat:hover {
+            background-color: pink;
+        }
+
+        .fat:hover>div>.fattext2 {
+            display: none;
+        }
+
+        .fat:hover>div>.fattext3 {
+            display: block;
+            font-size: 37px;
+            color: rgb(60, 60, 60);
+            background-color: pink;
+            height: 100%;
+        }
+
+
+
+        .bigbox2 {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+        }
+
+        .bigbox2>a {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+        }
+
+        .history {
+            display: flex;
+            font-weight: bold;
+            flex: 1;
+            background-color: rgb(250, 250, 174);
+            border: solid;
+            border-width: 5px;
+        }
+
+        .text3-1 {
+            display: flex;
+            font-size: 50px;
+        }
+
+        .text3-2 {
+            display: none;
+        }
+
+
+
+        .history:hover {
+            background-color: rgb(227, 235, 127);
+        }
+
+        .history:hover>div>.text3-1 {
+            display: none;
+        }
+
+        .history:hover>div>.text3-2 {
+            display: flex;
+            font-size: 50px;
+            color: rgb(60, 60, 60);
+            background-color: rgb(227, 235, 127);
+            height: 100%;
+        }
+
+
+
+
+
+        .contact {
+            display: flex;
+            font-weight: bold;
+            flex: 1;
+            background-color: skyblue;
+            border: solid;
+            border-width: 5px;
+            position: relative
+        }
+
+        .text4 {
+            display: flex;
+            font-size: 50px;
+        }
+
+        .text5 {
+            display: none;
+        }
+
+        .contact:hover {
+            background-color: rgb(57, 149, 185);
+        }
+
+        .contact:hover>div>.text4 {
+            display: none;
+        }
+
+        .contact:hover>div>.text5 {
+            display: flex;
+            flex-direction: column;
+            font-size: 40px;
+            color: rgb(60, 60, 60);
+            background-color: rgb(57, 149, 185);
+            height: 100%;
+        }
+
+        .email {
+            font-size: 35px;
+        }
+
+        .left {
+            position: absolute;
+            left: 0;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .firsttext {
+            margin-left: 10px;
+        }
+
+        @media(max-width:900px) {
+            .alldiv {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .naeyong {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .boldtext {
+                font-size: 40px;
+            }
+
+            .mainbox {
+
+                border: none;
+                font-size: 35px;
+
+            }
+
+            .team:hover>div>.teamtext {
+                display: flex;
+            }
+
+            .team:hover>div>.teamtext1 {
+                display: none;
+            }
+
+            .bigbox1 {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+
+            .longtext {
+                display: flex;
+                height: 400px;
+                flex: 1;
+                border: solid;
+            }
+
+            .bigbox2 {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+
+
+            .fat:hover>div>.fattext2 {
+                display: flex;
+            }
+
+            .fat:hover>div>.fattext3 {
+                display: none;
+            }
+
+
+            .contact:hover>div>.text5 {
+                display: none;
+            }
+
+            .contact:hover>div>.text4 {
+                display: flex;
+            }
+
+            .email {
+                font-size: 25px;
+            }
+
+
+        }
+    </style>
+
 </head>
 
 <body>
-  <div class="bigbox">
-    <div class="container">
-      <div id="slides" class="slides">
-        <div class="slide">
-          <img
-            src="https://images.unsplash.com/photo-1622495805962-d93109c8def4?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
+    <div class="main">
+        <div class="header">
+            <a href="index.html">
+                <div class="BLC">BLC</div>
+            </a>
+            <div class="empty1"></div>
+            <div class="headernaeyong">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
-        <div class="slide">
-          <img
-            src="https://images.unsplash.com/photo-1623611659533-05cb5561fd5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" />
+        <div class="alldiv">
+            <div class="leftdiv"></div>
+            <div class="allcontent">
+                <div class="naeyong">
+                    <div class="mainbox">
+                        <div class="longtext">
+                            <div class="">
+                                <div class="firsttext">We want everyone to</div>
+                                <div class="firsttext"><strong class="boldtext">BLC</strong> from <strong
+                                        class="boldtext">“Skinny Fat”</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bigbox1">
+                        <a href="./page3-1.html">
+                            <div class="team">
+                                <div class="">
+                                    <div class="teamtext">About Us</div>
+                                    <div class="teamtext1">우리는 사람들이 <strong>‘마른비만’</strong> 이라는 겉모습에 감춰진 질병으로부터 건강을 잃지
+                                        않기 위해
+                                        노력합니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="./page2.html">
+                            <div class="fat">
+                                <div class="">
+                                    <div class="fattext2">마른비만?</div>
+                                    <div class="fattext3">마른 비만은 <strong>겉으로 잘 드러나지 않는</strong>
+                                        비만상태를 이야기합니다.</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                </a>
+
+
+
+                <div class="bigbox2">
+                    <a href="./page4-1.html">
+                        <div class="history">
+                            <div class="">
+                                <div class="text3-1">History</div>
+                                <div class="text3-2">History</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="contact">
+                        <div class="">
+                            <div class="text4">문의하기</div>
+                            <div class="text5">
+                                <div>☎ 010-2211-3019</div>
+                                <div class="email">📧 behealthyblc@gmail.com</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="rightdiv"></div>
         </div>
-        <div class="slide">
-          <img
-            src="https://images.unsplash.com/photo-1623593420942-5c4587c1eef2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
-        </div>
-      </div>
     </div>
-    <button id="prev">이전</button>
-    <button id="next">다음</button>
-  </div>
-
-  <script>
-    var page = 0;
-
-    document.getElementById("prev").addEventListener('click', function () {
-      // 페이지 변경
-      if (page != 0) {
-        page = page - 1;
-        // 변견된 페이지에 맞게 transfor 지정
-        document.getElementById("slides").style.transform = `translate(-${page * 100}vw)`
-      }
-    })
-    document.getElementById("next").addEventListener('click', function () {
-      if (page != 2) {
-        page = page + 1;
-        document.getElementById("slides").style.transform = `translate(-${page * 100}vw)`
-      }
-    })
-  </script>
 </body>
 
 </html>
