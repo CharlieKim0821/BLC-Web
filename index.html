@@ -63,7 +63,15 @@
             flex-direction: row;
             margin: 30px;
         }
-
+        .title{
+            margin: 10px;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+        .title:hover{
+            margin-top:7px;
+            font-size: 25px;
+        }
         .main {
             display: flex;
             flex-direction: column;
@@ -116,11 +124,20 @@
             border-width: 5px;
             background-image: url(./mainpage_picture2.png);
             background-size: 100%;
+            transition: 0.3s;
+            background-position: center;
+        }
+        .mainbox:hover{
+            background-size: 110%;
         }
 
         .longtext {
             height: 400px;
             flex: 1;
+            text-shadow: -0.5px 0 white,
+                0 0.5px white,
+                0.5px 0 white,
+                0 -0.5px white;
 
         }
 
@@ -145,11 +162,12 @@
         }
 
         .teamtext {
+            display: flex;
             font-weight: bold;
             font-size: 50px;
         }
 
-        .teamtext1 {
+        .teamtext2 {
             display: none;
         }
 
@@ -157,16 +175,15 @@
             background-color: rgb(80, 148, 80);
         }
 
-        .team:hover>div>.teamtext {
+        .team:hover>.teamtext {
             display: none;
         }
 
-        .team:hover>div>.teamtext1 {
-            display: block;
-            font-size: 35px;
+        .team:hover>.teamtext2 {
+            display: flex;
             color: rgb(60, 60, 60);
-            background-color: rgb(80, 148, 80);
-            height: 100%;
+            font-weight: bold;
+            font-size: 50px;
         }
 
         .fat {
@@ -182,8 +199,7 @@
             font-weight: bold;
             font-size: 50px;
         }
-
-        .fattext3 {
+        .fattext2-2{
             display: none;
         }
 
@@ -191,8 +207,14 @@
             background-color: pink;
         }
 
-        .fat:hover>div>.fattext2 {
+        .fat:hover>.fattext2 {
             display: none;
+        }
+        .fat:hover>.fattext2-2 {
+            display: flex;
+            color: rgb(60, 60, 60);
+            font-weight: bold;
+            font-size: 50px;
         }
 
         .fat:hover>div>.fattext3 {
@@ -250,7 +272,6 @@
         .history:hover>div>.text3-2 {
             display: flex;
             font-size: 50px;
-            color: rgb(60, 60, 60);
             background-color: rgb(227, 235, 127);
             height: 100%;
         }
@@ -281,12 +302,13 @@
 
         .contact:hover>div>.text4 {
             display: none;
+            
         }
 
         .contact:hover>div>.text5 {
             display: flex;
             flex-direction: column;
-            font-size: 40px;
+            font-size: 50px;
             color: rgb(60, 60, 60);
             background-color: rgb(57, 149, 185);
             height: 100%;
@@ -328,9 +350,7 @@
             display: none;
         }
 
-        .title {
-            margin: 10px;
-        }
+        
 
         @media(max-width:900px) {
             .alldiv {
@@ -551,10 +571,7 @@
                             <div class="team">
                                 <div class="">
                                     <div class="teamtext">About Us</div>
-                                    <div class="teamtext1">우리는 사람들이 <strong>‘마른비만’</strong> 이라는 겉모습에 감춰진 질병으로부터 건강을 잃지
-                                        않기 위해
-                                        노력합니다.
-                                    </div>
+                                    <div class="teamtext2">About Us</div>
                                 </div>
                             </div>
                         </a>
@@ -563,8 +580,7 @@
                             <div class="fat">
                                 <div class="">
                                     <div class="fattext2">마른비만?</div>
-                                    <div class="fattext3">마른 비만은 <strong>겉으로 잘 드러나지 않는</strong>
-                                        비만상태를 이야기합니다.</div>
+                                    <div class="fattext2-2">마른비만?</div>
                                 </div>
                             </div>
                     </div>
@@ -586,10 +602,7 @@
                     <div class="contact">
                         <div class="">
                             <div class="text4">문의하기</div>
-                            <div class="text5">
-                                <div>☎ 010-2211-3019</div>
-                                <div class="email">📧 behealthyblc@gmail.com</div>
-                            </div>
+                            <div class="text5">문의하기</div>
                         </div>
 
                     </div>
