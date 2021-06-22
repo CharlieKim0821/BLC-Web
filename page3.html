@@ -7,6 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .header{
+            background-color: white;
+            height: 60px;
+            flex-direction: row;
+            display: flex;
+            border-left: solid 10px;
+            border-right: solid 10px;
+            border-top: solid 10px;
+            background-image: url("BLC_Logo.png");
+            background-size: 60px;
+            background-repeat: no-repeat;
+        }
+        .BLC{
+            margin-top: 3px;
+            margin-left: 70px;
+            font-size: 50px;
+        }
         .team_info__title{
             border: 5px;
             border-color: black;
@@ -28,6 +45,9 @@
             display: flex;
             align-items:center;
             justify-content: center;
+            background-image: url("김유성.png");
+            background-size: 200px;
+            background-repeat: no-repeat;
         }
         .team_info__charlie{
             width: 50%;
@@ -37,6 +57,9 @@
             display: flex;
             align-items:center;
             justify-content: center;
+            background-image: url("김찰리.png");
+            background-size: 300px;
+            background-repeat: no-repeat;
         }
         .team_info__lenon{
             width: 50%;
@@ -46,17 +69,32 @@
             display: flex;
             align-items:center;
             justify-content: center;
+            background-image: url("이레넌.png");
+            background-size: 300px;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
 
 <body>
-    <div class="team_info__title"><p>우리는 사람들이 <b>‘마른비만’</b> 이라는</p>
+    <div class="header">
+        <a href="index.html">
+            <div class="BLC">
+                <b>BLC</b>
+            </div>
+        </a>
+    </div>
+    <div class="team_info__title">
+        <p>우리는 사람들이 <b>‘마른비만’</b> 이라는</p>
         <p>겉모습에 감춰진 질병으로부터</p>
         <p>건강을 잃지 않기 위해 노력합니다.</p></div>
     <div class="line2">
-        <div class="team_info__charlie"><a href="https://github.com/CharlieKim0821/Charlie_C_Lab_Portfolio">찰리</a></div>
-        <div class="team_info__lenon"><a href="https://github.com/dlrua6939/new-git">레넌</a></div>
+        <div class="team_info__charlie">
+            <a href="https://github.com/CharlieKim0821/Charlie_C_Lab_Portfolio">찰리</a>
+        </div>
+        <div class="team_info__lenon">
+            <a href="https://github.com/dlrua6939/new-git">레넌</a>
+        </div>
     </div>
     <div class="team_info__yuseong">
         <a href="https://minsik0908.github.io/minsik-portfolio/">유성</a>
