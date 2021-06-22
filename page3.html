@@ -7,6 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .header{
+            border: 5px;
+            border-color: black;
+            border-style: solid;
+            background-color: white;
+            height: 60px;
+            flex-direction: row;
+            display: flex;
+            border-left: solid 10px;
+            border-right: solid 10px;
+            border-top: solid 10px;
+            background-image: url("BLC_Logo.png");
+            background-size: 60px;
+            background-repeat: no-repeat;
+            font-size: 30px;
+        }
+        .BLC{
+            margin-top: 3px;
+            margin-left: 70px;
+            font-size: 50px;
+        }
         .team_info__title{
             border: 5px;
             border-color: black;
@@ -51,7 +72,13 @@
 </head>
 
 <body>
-    <div class="team_info__title"><p>우리는 사람들이 <b>‘마른비만’</b> 이라는</p>
+    <div class="header">
+        <a href="index.html">
+            <div class="BLC"><b>BLC</b></div>
+        </a>
+    </div>
+    <div class="team_info__title">
+        <p>우리는 사람들이 <b>‘마른비만’</b> 이라는</p>
         <p>겉모습에 감춰진 질병으로부터</p>
         <p>건강을 잃지 않기 위해 노력합니다.</p>
     </div>
