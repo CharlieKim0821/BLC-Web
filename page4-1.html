@@ -127,48 +127,27 @@
             display: none;
         }
 
-        @media(max-width:700px) {
-            .picture {
-                display: none;
-            }
-
-            .picture1 {
-                height: 300px;
-                display: flex;
-                margin: auto;
-            }
-
-            .bigbox {
-                height: 280px;
-                width: 350px;
-            }
-
-            .slide {
-
-                display: flex;
-                flex-direction: row;
-            }
-
-            .next {
-                width: 25px;
-                height: 25px;
-                border-radius: 25px;
-            }
-
-            .prev {
-                width: 25px;
-                height: 25px;
-                border-radius: 25px;
-            }
-        }
-
-        .picture {
-            height: 600px;
-        }
-
-        .picture1 {
+        .hidden {
             display: none;
         }
+
+        .navbar__menu {
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+            margin: 10px;
+            right: 300px;
+            position: absolute;
+        }
+
+        .navbar__menu_ham {
+            display: none;
+        }
+
+        .title {
+            margin: 10px;
+        }
+
 
         @media(max-width:700px) {
             .picture {
@@ -251,6 +230,22 @@
                 transform: translateX(-50%) rotate(-45deg) translateZ(0);
             }
 
+            .navbar__menu {
+                display: none;
+            }
+
+            .navbar__menu_ham {
+                display: none;
+                flex-direction: column;
+                font-size: 20px;
+                border: solid;
+                text-align: center;
+            }
+
+            .navbar__menu_ham.active {
+                display: flex;
+            }
+
         }
     </style>
 </head>
@@ -261,6 +256,13 @@
             <a href="index.html">
                 <div class="BLC">BLC</div>
             </a>
+
+            <div class="navbar__menu">
+                <div class="title">팀 소개</div>
+                <div class="title">마른 비만</div>
+                <div class="title">연표</div>
+            </div>
+
             <a href="javascript:;" class="btn-menu"></a>
 
             <script>
@@ -269,6 +271,23 @@
                 });
             </script>
         </div>
+
+        <div class="navbar__menu_ham">
+            <div class="title">팀 소개</div>
+            <div class="title">마른 비만</div>
+            <div class="title">연표</div>
+        </div>
+
+        <script>
+            document.querySelector(".btn-menu").addEventListener("click", function () {
+                var menu = document.querySelector(".navbar__menu_ham");
+                if (menu.classList.contains("active")) {
+                    menu.classList.remove("active")
+                } else {
+                    menu.classList.add("active")
+                }
+            })
+        </script>
         <div class="bigbox">
 
             <button id="prev" class="prev"></button>

@@ -165,58 +165,97 @@
             margin-bottom: 5px;
 
         }
-        @media(max-width: 700px){
 
-            .mid{
+        .hidden {
+            display: none;
+        }
+
+        .navbar__menu {
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+            margin: 10px;
+            right: 300px;
+            position: absolute;
+        }
+
+        .navbar__menu_ham {
+            display: none;
+        }
+
+        .title {
+            margin: 10px;
+        }
+
+        @media(max-width: 700px) {
+
+            .mid {
                 display: flex;
                 flex-direction: column;
             }
-        .btn-menu {
-            right: 10px;
-            position: absolute;
-            float: right;
-            width: 60px;
-            height: 60px;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            background: #fff;
-        }
 
-        .btn-menu:before,
-        .btn-menu:after {
-            display: block;
-            content: "";
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 36px;
-            height: 3px;
-            background: #000;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-            -webkit-transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
+            .btn-menu {
+                right: 10px;
+                position: absolute;
+                float: right;
+                width: 60px;
+                height: 60px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                background: #fff;
+            }
 
-        .btn-menu:before {
-            margin-top: -8px;
-        }
+            .btn-menu:before,
+            .btn-menu:after {
+                display: block;
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 36px;
+                height: 3px;
+                background: #000;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                -webkit-transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+                transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            }
 
-        .btn-menu:after {
-            margin-top: 4px;
-        }
+            .btn-menu:before {
+                margin-top: -8px;
+            }
 
-        .btn-menu.active:before {
-            margin-top: -2px;
-            -webkit-transform: translateX(-50%) rotate(45deg) translateZ(0);
-            transform: translateX(-50%) rotate(45deg) translateZ(0);
-        }
+            .btn-menu:after {
+                margin-top: 4px;
+            }
 
-        .btn-menu.active:after {
-            margin-top: -2px;
-            -webkit-transform: translateX(-50%) rotate(-45deg) translateZ(0);
-            transform: translateX(-50%) rotate(-45deg) translateZ(0);
-        }
+            .btn-menu.active:before {
+                margin-top: -2px;
+                -webkit-transform: translateX(-50%) rotate(45deg) translateZ(0);
+                transform: translateX(-50%) rotate(45deg) translateZ(0);
+            }
+
+            .btn-menu.active:after {
+                margin-top: -2px;
+                -webkit-transform: translateX(-50%) rotate(-45deg) translateZ(0);
+                transform: translateX(-50%) rotate(-45deg) translateZ(0);
+            }
+
+            .navbar__menu {
+                display: none;
+            }
+
+            .navbar__menu_ham {
+                display: none;
+                flex-direction: column;
+                font-size: 20px;
+                border: solid;
+                text-align: center;
+            }
+
+            .navbar__menu_ham.active {
+                display: flex;
+            }
         }
     </style>
 </head>
@@ -226,13 +265,41 @@
         <a href="index.html">
             <div class="BLC">BLC</div>
         </a>
+
+        <div class="navbar__menu">
+            <div class="title">팀 소개</div>
+            <div class="title">마른 비만</div>
+            <div class="title">연표</div>
+        </div>
+
         <a href="javascript:;" class="btn-menu"></a>
+
         <script>
             document.querySelector('.btn-menu').addEventListener('click', function () {
                 this.classList.toggle('active');
             });
-        </script>
 
+
+        </script>
+        <div class="empty1"></div>
+    </div>
+
+    <div class="navbar__menu_ham">
+        <div class="title">팀 소개</div>
+        <div class="title">마른 비만</div>
+        <div class="title">연표</div>
+    </div>
+
+    <script>
+        document.querySelector(".btn-menu").addEventListener("click", function () {
+            var menu = document.querySelector(".navbar__menu_ham");
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active")
+            } else {
+                menu.classList.add("active")
+            }
+        })
+    </script>
     </div>
     <div class="mainbox">
         <div class="vision">
