@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry page</title>
+    <link rel="short icon" href="img/favicon.ico">
+    <style>
+        body {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+
+        a:focus {
+            text-decoration: none;
+        }
+
+
+        a:active {
+            text-decoration: none;
+        }
+        .header {
+            background-color: white;
+            height: 60px;
+            flex-direction: row;
+            display: flex;
+            border: solid;
+            border-width: 5px;
+            background-image: url("BLC_Logo.png");
+            background-size: 60px;
+            background-repeat: no-repeat;
+        }
+
+        .BLC {
+            margin-top: 3px;
+            margin-left: 70px;
+            font-size: 50px;
+        }
+
+        .headernaeyong {
+            display: flex;
+            flex-direction: row;
+            margin: 30px;
+        }
+
+        .title {
+            margin: 10px;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+
+        .title:hover {
+            margin-top: 7px;
+            font-size: 25px;
+        }
+        .navbar__menu {
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+            margin: 10px;
+            right: 10px;
+            position: absolute;
+        }
+
+        .navbar__menu_ham {
+            display: none;
+        }
+
+        .title{
+            margin: 10px;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+        .title:hover{
+            margin-top:7px;
+            font-size: 25px;
+        }
+
+
+        .box {
+            display: flex;
+            flex-direction: row;
+            border: solid 10px;
+            width:50%;
+            margin:auto;
+            margin-top:100px;
+        }
+        img{
+            width: 300px;
+            align-items: center;
+        }
+        .logo{
+            margin:auto;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            margin:auto;
+            font-size: 50px;
+        }
+        .content2{
+            font-size: 30px;
+        }
+
+        @media(max-width:900px){
+            .btn-menu {
+                right: 10px;
+                position: absolute;
+                float: right;
+                width: 60px;
+                height: 60px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                background: #fff;
+            }
+
+            .btn-menu:before,
+            .btn-menu:after {
+                display: block;
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 36px;
+                height: 3px;
+                background: #000;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                -webkit-transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+                transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            .btn-menu:before {
+                margin-top: -8px;
+            }
+
+            .btn-menu:after {
+                margin-top: 4px;
+            }
+
+            .btn-menu.active:before {
+                margin-top: -2px;
+                -webkit-transform: translateX(-50%) rotate(45deg) translateZ(0);
+                transform: translateX(-50%) rotate(45deg) translateZ(0);
+            }
+
+            .btn-menu.active:after {
+                margin-top: -2px;
+                -webkit-transform: translateX(-50%) rotate(-45deg) translateZ(0);
+                transform: translateX(-50%) rotate(-45deg) translateZ(0);
+            }
+
+            .navbar__menu {
+                display: none;
+            }
+
+            .navbar__menu_ham {
+                display: none;
+                flex-direction: column;
+                font-size: 20px;
+                border: solid;
+                text-align: center;
+            }
+
+            .navbar__menu_ham.active {
+                display: flex;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html">
+            <div class="BLC">BLC</div>
+        </a>
+
+        <div class="navbar__menu">
+            <a href="./page3-2.html">
+                <div class="title">팀 소개</div>
+            </a>
+            <a href="./page2.html">
+                <div class="title">마른 비만</div>
+            </a>
+            <a href="./page4-1.html">
+                <div class="title">연표</div>
+            </a>
+        </div>
+
+        <a href="javascript:;" class="btn-menu"></a>
+
+        <script>
+            document.querySelector('.btn-menu').addEventListener('click', function () {
+                this.classList.toggle('active');
+            });
+
+
+        </script>
+        <div class="empty1"></div>
+    </div>
+
+    <div class="navbar__menu_ham">
+        <a href="./page3-2.html">
+            <div class="title">팀 소개</div>
+        </a>
+        <a href="./page2.html">
+            <div class="title">마른 비만</div>
+        </a>
+        <a href="./page4-1.html">
+            <div class="title">연표</div>
+        </a>
+    </div>
+
+    <script>
+        document.querySelector(".btn-menu").addEventListener("click", function () {
+            var menu = document.querySelector(".navbar__menu_ham");
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active")
+            } else {
+                menu.classList.add("active")
+            }
+        })
+    </script>
+    <div class="box">
+        <div class="logo">
+            <img src="./BLC_Logo.png">
+        </div>
+        <div class="content">
+            <div class="call">call</div><div class="content2">: 010-2211-3019</div>
+            <div class="email">E-mail</div><div class="content2">: behealthyblc@gmail.com</div>
+        </div>
+    </div>
+</body>
+
+</html>
