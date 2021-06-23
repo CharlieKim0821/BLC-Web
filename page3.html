@@ -8,6 +8,20 @@
     <title>Team page</title>
     <link rel="short icon" href="img/favicon.ico">
     <style>
+        @font-face {
+            font-family: 'GongGothicMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'GongGothicMedium';
+            margin: 0px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
         .header{
             background-color: white;
             height: 60px;
@@ -47,12 +61,17 @@
             border-color: black;
             border-style: solid;
             text-align: center;
+            margin: auto;
             height: 200px;
             font-size: 30px;
             background-image: url("Team_BLC_Picture.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: 1500px;
+            text-shadow: -0.5px 0 black,
+                0 0.5px black,
+                0.5px 0 black,
+                0 -0.5px black;
         }
         p{
             color: white;
