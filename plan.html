@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan</title>
+    <link rel="short icon" href="img/favicon.ico">
+</head>
+<style>
+    @font-face {
+            font-family: 'GongGothicMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        html{
+            cursor: url(./cursor2.cur), auto;
+        }
+        body {
+            font-family: 'GongGothicMedium';
+            margin: 0;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        a,
+        a:link {
+            cursor: url('./cursor.cur'), auto;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+
+        a:focus {
+            text-decoration: none;
+        }
+
+
+        a:active {
+            text-decoration: none;
+        }
+
+        .header {
+            background-color: white;
+            height: 60px;
+            flex-direction: row;
+            display: flex;
+            border: solid;
+            border-width: 5px;
+            background-image: url("BLC_Logo.png");
+            background-size: 60px;
+            background-repeat: no-repeat;
+        }
+
+        .BLC {
+            margin-top: 3px;
+            margin-left: 70px;
+            font-size: 50px;
+        }
+
+        .headernaeyong {
+            display: flex;
+            flex-direction: row;
+            margin: 30px;
+        }
+
+        .title {
+            margin: 10px;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+
+        .title:hover {
+            margin-top: 7px;
+            font-size: 25px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            border: solid;
+            border-width: 5px;
+        }
+        .hidden {
+            display: none;
+        }
+
+        .navbar__menu {
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+            margin: 10px;
+            right: 20px;
+            position: absolute;
+        }
+
+        .navbar__menu_ham {
+            display: none;
+        }
+
+</style>
+<body>
+    <div class="main">
+        <div class="header">
+            <a href="index.html">
+                <div class="BLC">BLC</div>
+            </a>
+
+            <div class="navbar__menu">
+                <a href="./page3-2.html">
+                    <div class="title">Team</div>
+                </a>
+                <a href="./page2.html">
+                    <div class="title">Obesity</div>
+                </a>
+                <a href="./page4-1.html">
+                    <div class="title">Plan</div>
+                </a>
+            </div>
+
+            <a href="javascript:;" class="btn-menu"></a>
+
+            <script>
+                document.querySelector('.btn-menu').addEventListener('click', function () {
+                    this.classList.toggle('active');
+                });
+
+
+            </script>
+            <div class="empty1"></div>
+        </div>
+
+        <div class="navbar__menu_ham">
+            <a href="./page3-2.html">
+                <div class="title">Team</div>
+            </a>
+            <a href="./page2.html">
+                <div class="title">Obesity</div>
+            </a>
+            <a href="./page4-1.html">
+                <div class="title">Plan</div>
+            </a>
+        </div>
+
+        <script>
+            document.querySelector(".btn-menu").addEventListener("click", function () {
+                var menu = document.querySelector(".navbar__menu_ham");
+                if (menu.classList.contains("active")) {
+                    menu.classList.remove("active")
+                } else {
+                    menu.classList.add("active")
+                }
+            })
+        </script>
+    </div>
+    <div class="alldiv">
+        <div class="leftdiv"></div>
+        <div class="allcontent"></div>
+        <div class="rightdiv"></div>
+    </div>
+</body>
+</html>
