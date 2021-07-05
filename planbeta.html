@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Project 1</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:300|Spartan&display=swap');
+
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #E9DFC8;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a,
+        a:link {
+            cursor: url('./cursor.cur'), auto;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+
+        a:focus {
+            text-decoration: none;
+        }
+
+
+        a:active {
+            text-decoration: none;
+        }
+
+
+
+        .page {
+            font-family: 'Montserrat', serif;
+            color: black;
+            width: 100vw;
+            height: calc(100vh - 4.5rem);
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+
+        nav~.content-page {
+            margin-top: 4.5rem;
+        }
+
+        .content-page {
+            font-size: 1.75rem;
+        }
+
+        #intro {
+            text-align: center;
+        }
+
+        @media (max-width: 720px) {
+            #intro {
+                margin-top: 4.5rem;
+            }
+        }
+
+        #intro>#intro-title {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        #intro>#intro-description {
+            font-size: 1rem;
+        }
+
+        nav {
+            font-family: 'Montserrat', serif;
+            position: absolute;
+            top: calc(100vh - 4.5rem);
+            width: 100vw;
+            min-height: 4.5rem;
+            background: white;
+            box-shadow: 0 -2px 1rem #cfd2cd;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        @media (max-width: 720px) {
+            nav {
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-start;
+                top: 0;
+                height: 100vh;
+                width: initial;
+            }
+        }
+
+        nav a {
+            position: relative;
+            background: transparent;
+            text-align: center;
+            height: 4.5rem;
+            text-decoration: none;
+            color: #135058;
+
+        }
+
+        @media (max-width: 720px) {
+            nav a {
+                width: 100%;
+                margin: auto;
+                padding: 0 1.5rem;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        nav a.menu-btn {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        @media (min-width: 720px) {
+            nav a.menu-btn {
+                display: none;
+            }
+        }
+
+        nav a#user-btn {
+            color: #000000;
+        }
+
+        nav a.tab:not(.placeholder),
+        nav a.tab:not(.placeholder)::after {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            flex: 1;
+            line-height: 4.5rem;
+            font-size: 1rem;
+            vertical-align: center;
+        }
+
+        nav a.tab:not(.placeholder)::before,
+        nav a.tab:not(.placeholder)::after {
+            font-family: 'GmarketSansMedium';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+        }
+
+        nav a.tab:not(.placeholder)::before {
+            content: "";
+            border-bottom: solid 3px #F3904F;
+            transition: 0.5s ease;
+            z-index: 1000;
+        }
+
+        @media (max-width: 720px) {
+            nav a.tab:not(.placeholder)::before {
+                display: none;
+            }
+        }
+
+        nav a.tab:not(.placeholder)::after {
+            content: attr(data-text);
+            color: #F3904F;
+            background: #13583b;
+        }
+
+        @media (max-width: 720px) {
+            nav a.tab:not(.placeholder)::after {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 1.5rem;
+            }
+        }
+
+        nav a.tab:not(.placeholder):hover::after {
+            opacity: 1;
+            transition: 0.5s ease;
+        }
+
+        nav a.tab:not(.placeholder).active::before {
+            opacity: 1;
+            transition: 0.5s ease;
+        }
+
+        nav a.tab.hidden {
+            display: none;
+        }
+
+        nav.hidden {
+            transform: translateX(-100%);
+        }
+
+        img {
+            border: solid#000000;
+            border-radius: 30px;
+            margin: 50px;
+        }
+
+        .project1 {
+            font-family: 'GmarketSansMedium';
+            display: flex;
+            flex-direction: row;
+        }
+
+        .name {
+            font-size: 40px;
+            margin-bottom: 40px;
+            margin-top: 50px;
+        }
+
+        .info {
+            font-size: 25px;
+        }
+
+        .things1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .naeyong {
+            font-size: 25px;
+            margin: 80px;
+        }
+
+        .content {
+            margin-top: 30px;
+        }
+
+        .project2 {
+            font-family: 'GmarketSansMedium';
+            display: flex;
+            flex-direction: row;
+            border-radius: 40px;
+        }
+
+
+
+        .things2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+        .project3 {
+            font-family: 'GmarketSansMedium';
+            display: flex;
+            flex-direction: row;
+            border-radius: 40px;
+        }
+
+
+        .things3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project4 {
+            font-family: 'GmarketSansMedium';
+            display: flex;
+            flex-direction: row;
+            border-radius: 40px;
+        }
+
+
+
+        .things4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .moreinfo {
+            margin-top: 20px;
+            color: rgb(63, 63, 63);
+            width: 200px;
+        }
+
+        .moreinfo:hover {
+            transition: 0.3s;
+            cursor: pointer;
+            font-size: 30px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section id="intro" class="page">
+        <div id="intro-title">
+            <b>&nbsp;&nbsp;&nbsp;&nbsp;P E R S O N A L&nbsp;&nbsp;&nbsp;&nbsp;P R O J E C T S
+                &nbsp;&nbsp;&nbsp;&nbsp;</b>
+        </div>
+        <div id="intro-description">
+            4 Personal Projects By Charlie
+        </div>
+    </section>
+
+    <nav>
+        <a class="menu-btn">
+
+        </a>
+        <a class="tab placeholder"></a>
+        <a class="tab" data-text="어떤 이어폰을 사야 잘 샀다고 소문이 날까?" href="#one">Module 1</a>
+        <a class="tab" data-text="게임 시간 선택제 이대로 괜찮은가?" href="#two">Module 2</a>
+        <a class="tab" data-text="시각장애인을 위한 점자 키보드" href="#three">Module 3</a>
+        <a class="tab" data-text="수전사로 신발 커스텀하기" href="#four">Module 4</a>
+        <a class="tab" href="./index.html" data-text="메인 화면으로" id="user-btn">Back to Main</a>
+
+    </nav>
+
+    <a name="one"></a>
+    <section class="page content-page">
+        <div class="project1">
+            <img src="./pm1new.PNG" width="600px" height="450px">
+            <div class="things1">
+                <div class="name">어떤 이어폰을 사야 잘 샀다고 소문이 날까?</div>
+                <div class="naeyong">
+                    나의 첫 개인주제 프로젝트. 당시 관심사가 이어폰, 음향기기 분야였기에
+                    단순히 개인의 관심사를 통해서 주제를 선정하고 진행한 부분이 눈에 띈다.
+                    <a href="./m1ebook.pdf">
+                        <div class="moreinfo">-> 더 알아보기</div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a name="two"></a>
+    <section name="two" class="page content-page">
+        <div class="project2">
+            <div class="things2">
+                <div class="name">게임 시간 선택제 이대로 괜찮은가?</div>
+                <div class="naeyong">나의 두번째 개인주제 프로젝트. 그저 관심사의 정보 전달 차원에 그친 전 모듈의 프로젝트와는 달리 관심사에 대한 사회적
+                    문제점에 대한 본인의 생각을 담아내게 되면서 한 층 더 발전한 느낌이 든다.
+                    <a href="./m2ebook.pdf">
+                        <div class="moreinfo">-> 더 알아보기</div>
+                    </a>
+                </div>
+            </div>
+            <img src="./pm2new.PNG" width="600px" height="450px">
+
+        </div>
+    </section>
+
+    <a name="three"></a>
+    <section name="three" class="page content-page">
+        <div class="project3">
+            <img src="./pm3new.PNG" width="600px" height="450px">
+            <div class="things3">
+                <div class="name">시각장애인을 위한 점자 키보드</div>
+                <div class="naeyong">
+                    <div class="info">
+                        <div class="why3">Why? 현재 판매되는 점자 키보드들의 가격이 너무 비싸다</div>
+                        <div class="what3">What? 시각장애인 분들의 미디어 이용률이 낮다</div>
+                        <div class="how3">How? 저렴한 가격의 점자 키보드를 제작한다</div>
+                    </div>
+                    <div class="content">Why? What? How?로 왜 이 프로젝트를 진행하는지, 무엇을, 어떻게 할 것인지에 대한
+                        계획을 세우며 프로젝트를 진행했었다. 이때부터 체계적인 프로젝트가 진행되기 시작했다.
+                        <a href="./m3ebook.pdf">
+                            <div class="moreinfo">-> 더 알아보기</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <a name="four"></a>
+    <section name="four" class="page content-page">
+        <div class="project4">
+            <div class="things4">
+                <div class="name">수전사로 신발 커스텀하기</div>
+                <div class="naeyong">
+                    <div class="info">
+                        <div class="why4">Why? 상품성이 있는 제품을 제작하고 판매해보는 경험을 쌓기 위해서</div>
+                        <div class="what4">What? 나만의 개성있는 커스텀 신발을 제작한다</div>
+                        <div class="how4">How? 수전사를 통해서 커스텀 작업을 진행한다</div>
+                    </div>
+                    <div class="content">나의 개인 프로젝트 중 가장 만족스러웠던 프로젝트다. 지금까지 배운 대부분의 것들이 결합되어 있고,
+                        눈에 보이는 결과물이 있었기 때문에 성취감이 들었던 프로젝트다.
+                    </div>
+                    <a href="./m4ebook.pdf">
+                        <div class="moreinfo">-> 더 알아보기</div>
+                    </a>
+                </div>
+            </div>
+            <img src="./pm4new.PNG" width="600px" height="450px">
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", e => {
+            function offset(elem) {
+                let rect = elem.getBoundingClientRect();
+                let top = rect.top + (window.pageYOffset || document.documentElement.scrollTop),
+                    left = rect.left + (window.pageYOffset || document.documentElement.scrollLeft),
+                    right = left + elem.clientWidth,
+                    bottom = top + elem.clientHeight;
+                return { top, right, bottom, left };
+            }
+
+            function vh(v) {
+                let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                return (v * h) / 100;
+            }
+
+            const nav = document.querySelector("nav");
+            const tabs = document.querySelectorAll("nav > a.tab");
+            const menu_btn = document.querySelector("nav > .menu-btn");
+            const content_pages = document.querySelectorAll(".content-page");
+            const md = 720;
+
+            let nav_height = nav.clientHeight;
+            let nav_top_offset = offset(nav).top;
+
+            let scroll_position = 0;
+            let ticking = false;
+
+            window.addEventListener("scroll", e => {
+                scroll_position = window.pageYOffset;
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        if (scroll_position >= nav_top_offset) {
+                            nav.style.position = "fixed";
+                            nav.style.top = "0";
+                            nav.transition = "0.5s linear";
+                        }
+                        else {
+                            let active_tab = document.querySelector("nav a.active");
+                            if (active_tab) active_tab.classList.remove("active");
+                            nav.style.position = "static";
+                            nav.style.top = `${vh(100) - nav_height}`;
+                            nav.transition = "0.5s linear";
+                        }
+
+                        content_pages.forEach((page, idx) => {
+                            let { top, bottom } = offset(page);
+                            if (scroll_position >= top - nav_height && scroll_position <= bottom - nav_height) {
+                                let active_tab = document.querySelector("nav a.active");
+                                if (active_tab) active_tab.classList.remove("active");
+                                tabs[idx + 1].classList.add("active");
+                            }
+                        })
+
+                        ticking = false;
+                    });
+
+                    ticking = true;
+                }
+            });
+
+            function hide_tabs() {
+                if (window.innerWidth <= md) {
+                    tabs.forEach(tab => {
+                        tab.classList.add("hidden");
+                    });
+                }
+            }
+
+            hide_tabs();
+
+            window.onresize = e => {
+                if (window.innerWidth <= md)
+                    tabs.forEach(tab => {
+                        tab.classList.add("hidden");
+                    });
+                else
+                    tabs.forEach(tab => {
+                        tab.classList.remove("hidden");
+                    });
+            }
+
+            menu_btn.onclick = e => {
+                if (window.innerWidth <= md) {
+                    tabs.forEach(tab => {
+                        tab.classList.toggle("hidden");
+                    });
+                }
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
