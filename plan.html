@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,102 +10,138 @@
 </head>
 <style>
     @font-face {
-            font-family: 'GongGothicMedium';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        html{
-            cursor: url(./cursor2.cur), auto;
-        }
-        body {
-            font-family: 'GongGothicMedium';
-            margin: 0;
+        font-family: 'GongGothicMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
 
-        }
+    html {
+        cursor: url(./cursor2.cur), auto;
+    }
 
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        a,
-        a:link {
-            cursor: url('./cursor.cur'), auto;
-        }
+    body {
+        font-family: 'GongGothicMedium';
+        margin: 0;
 
-        a:visited {
-            text-decoration: none;
-        }
+    }
 
+    a {
+        text-decoration: none;
+        color: black;
+    }
 
-        a:focus {
-            text-decoration: none;
-        }
+    a,
+    a:link {
+        cursor: url('./cursor.cur'), auto;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
 
 
-        a:active {
-            text-decoration: none;
-        }
+    a:focus {
+        text-decoration: none;
+    }
 
-        .header {
-            background-color: white;
-            height: 60px;
-            flex-direction: row;
-            display: flex;
-            border: solid;
-            border-width: 5px;
-            background-image: url("BLC_Logo.png");
-            background-size: 60px;
-            background-repeat: no-repeat;
-        }
 
-        .BLC {
-            margin-top: 3px;
-            margin-left: 70px;
-            font-size: 50px;
-        }
+    a:active {
+        text-decoration: none;
+    }
 
-        .headernaeyong {
-            display: flex;
-            flex-direction: row;
-            margin: 30px;
-        }
+    .header {
+        background-color: white;
+        height: 60px;
+        flex-direction: row;
+        display: flex;
+        border: solid;
+        border-width: 5px;
+        background-image: url("BLC_Logo.png");
+        background-size: 60px;
+        background-repeat: no-repeat;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
 
-        .title {
-            margin: 10px;
-            font-size: 20px;
-            transition: 0.5s;
-        }
+    .BLC {
+        margin-top: 3px;
+        margin-left: 70px;
+        font-size: 50px;
+    }
 
-        .title:hover {
-            margin-top: 7px;
-            font-size: 25px;
-        }
+    .headernaeyong {
+        display: flex;
+        flex-direction: row;
+        margin: 30px;
+    }
 
-        .main {
-            display: flex;
-            flex-direction: column;
-            border: solid;
-            border-width: 5px;
-        }
-        .hidden {
-            display: none;
-        }
+    .title {
+        margin: 10px;
+        font-size: 20px;
+        transition: 0.5s;
+    }
 
-        .navbar__menu {
-            display: flex;
-            flex-direction: row;
-            font-size: 20px;
-            margin: 10px;
-            right: 20px;
-            position: absolute;
-        }
+    .title:hover {
+        margin-top: 7px;
+        font-size: 25px;
+    }
 
-        .navbar__menu_ham {
-            display: none;
-        }
+    .main {
+        display: flex;
+        flex-direction: column;
+        border: solid;
+        border-width: 5px;
+        position: relative;
+    }
 
+    .hidden {
+        display: none;
+    }
+
+    .navbar__menu {
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        margin: 10px;
+        right: 20px;
+        position: absolute;
+    }
+
+    .navbar__menu_ham {
+        display: none;
+    }
+    .bigbox{
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+    }
+    .contentbox{
+        margin: auto;
+        margin-top: 100px;
+        border: solid;
+        width: 800px;
+        height: 400px;
+    }
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: 50px;
+        border: solid;
+        height: 500px;
+        width: 100px;
+        font-size: 20px;
+    }
+    .date{
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 </style>
+
 <body>
     <div class="main">
         <div class="header">
@@ -158,11 +195,26 @@
                 }
             })
         </script>
+    
+    <div class="sidebar">
+        <div class="date">2021</div>
+        <div class="date">2022</div>
+        <div class="date">2023</div>
+        <div class="date">2024</div>
+        <div class="date">2025</div>
     </div>
     <div class="alldiv">
-        <div class="leftdiv"></div>
-        <div class="allcontent"></div>
-        <div class="rightdiv"></div>
+        <div class="allcontent">
+            <div class="bigbox">
+                <div class="contentbox"></div>
+                <div class="contentbox"></div>
+                <div class="contentbox"></div>
+                <div class="contentbox"></div>
+                <div class="contentbox"></div>
+            </div>
+        </div>
     </div>
+</div>
 </body>
+
 </html>
