@@ -7,16 +7,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @font-face {
+            font-family: 'GongGothicMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html {
+            cursor: url(./cursor2.cur), auto;
+        }
+
         body {
-            font-family: Hepta Slab, sans-serif;
+            font-family: 'GongGothicMedium';
             font-weight: 500;
-            background: #efecdb;
-            color: #5D4037;
+            background: white;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a,
+        a:link {
+            cursor: url('./cursor.cur'), auto;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+
+        a:focus {
+            text-decoration: none;
+        }
+
+
+        a:active {
+            text-decoration: none;
         }
 
         * {
             box-sizing: border-box;
         }
+
+        .header {
+            display: flex;
+            background-color: white;
+            flex-direction: row;
+            border: solid;
+            border-width: 5px;
+            background-image: url("BLC_Logo.png");
+            background-size: 60px;
+            background-repeat: no-repeat;
+        }
+
+        .BLC {
+            margin-top: 3px;
+            margin-left: 70px;
+            font-size: 50px;
+        }
+
+        .headernaeyong {
+            display: flex;
+            flex-direction: row;
+            margin: 30px;
+        }
+
+        .title {
+            margin: 10px;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+
+        .title:hover {
+            margin-top: 7px;
+            font-size: 25px;
+        }
+
+        .navbar__menu {
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+            margin: 10px;
+            right: 20px;
+            position: absolute;
+        }
+
+        .navbar__menu_ham {
+            display: none;
+        }
+
 
         /* hide scrollbar */
         ::-webkit-scrollbar {
@@ -101,16 +184,7 @@
             transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(25vh) translateY(-8vh);
         }
 
-        .scroll-info,
-        header {
-            position: absolute;
-            left: 1rem;
-        }
 
-
-        header {
-            bottom: 1rem;
-        }
 
         .scroll-info {
             top: 1rem;
@@ -164,82 +238,80 @@
 </head>
 
 <body>
+    <div class="main">
+        <div class="header">
+            <a href="index.html">
+                <div class="BLC">BLC</div>
+            </a>
+
+            <div class="navbar__menu">
+                <a href="./page3-2.html">
+                    <div class="title">팀 소개</div>
+                </a>
+                <a href="./page2.html">
+                    <div class="title">마른 비만</div>
+                </a>
+                <a href="./page4-1.html">
+                    <div class="title">연표</div>
+                </a>
+            </div>
+
+            <a href="javascript:;" class="btn-menu"></a>
+
+            <script>
+                document.querySelector('.btn-menu').addEventListener('click', function () {
+                    this.classList.toggle('active');
+                });
+
+
+            </script>
+            <div class="empty1"></div>
+        </div>
+    </div>
     <div class="external">
         <div class="horizontal-scroll-wrapper">
             <div class="img-wrapper slower">
-                <a href="https://altphotos.com/photo/stylish-parisian-cafe-terrace-279/" target="_blank"
-                    rel="noopener"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-cafe-terrace.jpg"
-                        alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-cafe-terrace.jpg" alt="">
             </div>
 
             <div class="img-wrapper faster">
-                <a href="https://altphotos.com/photo/retro-boy-doll-wearing-elegant-clothes-330/" target="_blank"
-                    rel="noopener">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/antiquedollboy.jpg" alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/antiquedollboy.jpg" alt="">
             </div>
 
             <div class="img-wrapper slower vertical">
-                <a href="https://altphotos.com/photo/clocks-shop-exposition-window-reflecting-the-streets-277/"
-                    target="_blank" rel="noopener">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/windowshopclock.jpg" alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/windowshopclock.jpg" alt="">
             </div>
 
             <div class="img-wrapper slower slower-down">
-                <a href="https://altphotos.com/photo/swans-and-ducks-swimming-in-a-river-264/" target="_blank"
-                    rel="noopener">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/swanduckriver.jpg" alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/swanduckriver.jpg" alt="">
             </div>
 
             <div class="img-wrapper">
-                <a href="https://altphotos.com/photo/sidewalk-terrace-of-a-blue-facade-cafe-312/" target="_blank"
-                    rel="noopener">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-terrace.jpg" alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-terrace.jpg" alt="">
             </div>
 
             <div class="img-wrapper slower">
-                <a href="https://altphotos.com/photo/paris-waterfront-at-sunset-1555/" target="_blank" rel="noopener">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-seine-boat.jpg" alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/paris-seine-boat.jpg" alt="">
             </div>
 
             <div class="img-wrapper faster1">
-                <a href="https://altphotos.com/photo/old-man-leaning-over-the-barrier-looking-at-the-river-265/"
-                    target="_blank" rel="noopener">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/old-man-river.jpg" alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/old-man-river.jpg" alt="">
             </div>
 
             <div class="img-wrapper slower slower2">
-                <a href="https://altphotos.com/photo/cafe-terrace-with-a-row-of-retro-tables-261/" target="_blank"
-                    rel="noopener">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-table-street.jpg" alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/cafe-table-street.jpg" alt="">
             </div>
 
             <div class="img-wrapper">
-                <a href="https://altphotos.com/photo/street-scene-with-pedestrians-and-dogs-318/" target="_blank"
-                    rel="noopener">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/street-scene-people.jpg" alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/street-scene-people.jpg" alt="">
             </div>
 
             <div class="img-wrapper slower">
-                <a href="https://altphotos.com/photo/tourist-barge-on-the-river-seine-near-notre-dame-266/"
-                    target="_blank" rel="noopener">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/notre-dame-river-boat.jpg" alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/notre-dame-river-boat.jpg" alt="">
             </div>
 
             <div class="img-wrapper slower last">
-                <a href="https://altphotos.com/photo/skulls-decoration-in-a-shop-window-331/" target="_blank"
-                    rel="noopener">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/shop-window-reflection.jpg" alt="">
-                </a>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/shop-window-reflection.jpg" alt="">
             </div>
         </div>
 
