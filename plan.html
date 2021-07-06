@@ -117,6 +117,7 @@
         display: flex;
         margin: auto;
         flex-direction: column;
+        margin-bottom: 50px;
     }
 
     .contentbox {
@@ -128,6 +129,7 @@
         position: relative;
         transition: 0.5s;
     }
+
     .contentbox:hover {
         width: 850px;
         height: 425px;
@@ -145,6 +147,7 @@
         font-size: 20px;
         z-index: 1000;
         background-color: white;
+        transition: 0.5s;
     }
 
     .date {
@@ -152,38 +155,61 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    img{
+
+    img {
         display: flex;
         position: absolute;
         width: 100%;
     }
-    @media(max-width:1200px){
-        .contentbox{
+
+    .conplete {
+        display: flex;
+        z-index: 500;
+        width: 100px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    @media(max-width:1200px) {
+        .contentbox {
             width: 600px;
             height: 300px;
         }
+
+        .sidebar{
+            margin-left: 40px;
+        }
+
         .contentbox:hover {
-        width: 650px;
-        height: 325px;
+            width: 650px;
+            height: 325px;
+        }
     }
-    }
-    @media(max-width:950px){
-        .contentbox{
+
+    @media(max-width:950px) {
+        .contentbox {
             width: 400px;
             height: 200px;
         }
-        .contentbox:hover {
-        width: 450px;
-        height: 225px;
-    }
         .sidebar{
+            margin-left: 30px;
+        }
+
+        .contentbox:hover {
+            width: 450px;
+            height: 225px;
+        }
+
+        .sidebar {
             width: 100px;
             height: 250px;
             font-size: 20px;
         }
     }
-    @media(max-width:950px){
-        .sidebar{
+
+    @media(max-width:950px) {
+        .sidebar {
             width: 70px;
             height: 250px;
             font-size: 15px;
@@ -244,24 +270,28 @@
                 }
             })
         </script>
-    
-    <div class="sidebar">
-        <div class="date">2021</div>
-        <div class="date">2022</div>
-        <div class="date">2023</div>
-        <div class="date">2024</div>
-        <div class="date">2025</div>
-    </div>
-    <div class="alldiv">
-        <div class="allcontent">
-            <div class="bigbox">
-                <div class="contentbox">
-                    <img src="BLC_Start.png">
+
+        <div class="sidebar">
+            <div class="date">2021.M2</div>
+            <div class="date">2021.M3</div>
+            <div class="date">2021.M4</div>
+        </div>
+        <div class="alldiv">
+            <div class="allcontent">
+                <div class="bigbox">
+                    <div class="contentbox">
+                        <img class="conplete" src="conplete.png">
+                        <img src="BLC_Start.png">
+                    </div>
+                    <div class="contentbox">
+                        <img src="BLC_Web.png">
+                    </div>
+                    <div class="contentbox">
+                        <img src="BLC_Diet.png">
+                    </div>
+                    <div class="contentbox"></div>
+                    <div class="contentbox"></div>
                 </div>
-                <div class="contentbox"></div>
-                <div class="contentbox"></div>
-                <div class="contentbox"></div>
-                <div class="contentbox"></div>
             </div>
         </div>
     </div>
