@@ -112,19 +112,29 @@
     .navbar__menu_ham {
         display: none;
     }
-    .bigbox{
+
+    .bigbox {
         display: flex;
         margin: auto;
         flex-direction: column;
     }
-    .contentbox{
+
+    .contentbox {
         margin: auto;
         margin-top: 100px;
         border: solid;
         width: 800px;
         height: 400px;
+        position: relative;
+        transition: 0.5s;
     }
-    .sidebar{
+
+    .contentbox:hover {
+        width: 850px;
+        height: 425px;
+    }
+
+    .sidebar {
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -134,11 +144,47 @@
         height: 500px;
         width: 100px;
         font-size: 20px;
+        background-color: white;
     }
-    .date{
+
+    .date {
         margin: auto;
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+
+    img {
+        display: flex;
+        position: absolute;
+        width: 100%;
+    }
+
+    @media(max-width:1200px) {
+        .contentbox {
+            width: 600px;
+            height: 300px;
+        }
+    }
+
+    @media(max-width:950px) {
+        .contentbox {
+            width: 400px;
+            height: 200px;
+        }
+
+        .sidebar {
+            width: 100px;
+            height: 250px;
+            font-size: 20px;
+        }
+    }
+
+    @media(max-width:950px) {
+        .sidebar {
+            width: 70px;
+            height: 250px;
+            font-size: 15px;
+        }
     }
 </style>
 
@@ -195,26 +241,28 @@
                 }
             })
         </script>
-    
-    <div class="sidebar">
-        <div class="date">2021</div>
-        <div class="date">2022</div>
-        <div class="date">2023</div>
-        <div class="date">2024</div>
-        <div class="date">2025</div>
-    </div>
-    <div class="alldiv">
-        <div class="allcontent">
-            <div class="bigbox">
-                <div class="contentbox"></div>
-                <div class="contentbox"></div>
-                <div class="contentbox"></div>
-                <div class="contentbox"></div>
-                <div class="contentbox"></div>
+
+        <div class="sidebar">
+            <div class="date">2021</div>
+            <div class="date">2022</div>
+            <div class="date">2023</div>
+            <div class="date">2024</div>
+            <div class="date">2025</div>
+        </div>
+        <div class="alldiv">
+            <div class="allcontent">
+                <div class="bigbox">
+                    <div class="contentbox">
+                        <img src="BLC_Start.png">
+                    </div>
+                    <div class="contentbox"></div>
+                    <div class="contentbox"></div>
+                    <div class="contentbox"></div>
+                    <div class="contentbox"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </body>
 
 </html>
